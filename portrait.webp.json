@@ -1,4 +1,4 @@
 {
-  "prompt": "Origin: Aditya Raj's own photo (supplied by the owner, 16 Dec 2025 mirror selfie). Background removed 2026-11-26 with rembg 2.0.88 using the BiRefNet-portrait model; cropped chest-up and resized. Not AI-generated.",
-  "createdAt": "2026-11-26T20:46:18.464Z"
+  "prompt": "Origin: Aditya Raj's own photo (supplied by the owner, 16 Dec 2025 mirror selfie). Background removed 2026-11-26 with rembg 2.0.88 using the BiRefNet-portrait model; alpha edge eroded 1px and softened 0.6px; cropped chest-up and resized. Not AI-generated.",
+  "createdAt": "2026-11-26T20:48:48.413Z"
 }
