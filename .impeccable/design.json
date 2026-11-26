@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-26T00:00:00Z",
+  "title": "Design System: Aditya Raj Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#111111",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#4a4a4f",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "pinned-grey": {
+        "role": "neutral",
+        "displayName": "Pinned Grey",
+        "canonical": "#8e8e93",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "hairline-soft": {
+        "role": "neutral",
+        "displayName": "Soft Hairline",
+        "canonical": "#d9d9de",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "signal-blue": {
+        "role": "primary",
+        "displayName": "Signal Blue",
+        "canonical": "#0071e3",
+        "tonalRamp": [
+          "oklch(15% 0.055 256)",
+          "oklch(26% 0.095 256)",
+          "oklch(38% 0.138 256)",
+          "oklch(49% 0.178 256)",
+          "oklch(61% 0.178 256)",
+          "oklch(72% 0.138 256)",
+          "oklch(84% 0.095 256)",
+          "oklch(95% 0.055 256)"
+        ]
+      },
+      "on-signal": {
+        "role": "primary",
+        "displayName": "On-Signal White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "live-green": {
+        "role": "functional",
+        "displayName": "Live Green",
+        "canonical": "#1fae4b",
+        "tonalRamp": [
+          "oklch(15% 0.046 148)",
+          "oklch(26% 0.08 148)",
+          "oklch(38% 0.117 148)",
+          "oklch(49% 0.151 148)",
+          "oklch(61% 0.151 148)",
+          "oklch(72% 0.117 148)",
+          "oklch(84% 0.08 148)",
+          "oklch(95% 0.046 148)"
+        ]
+      },
+      "paper-dark": {
+        "role": "neutral",
+        "displayName": "Paper (dark)",
+        "canonical": "#0d0d0e",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark)",
+        "canonical": "#f2f2f2",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "graphite-dark": {
+        "role": "neutral",
+        "displayName": "Graphite (dark)",
+        "canonical": "#b4b4ba",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "pinned-grey-dark": {
+        "role": "neutral",
+        "displayName": "Pinned Grey (dark)",
+        "canonical": "#86868b",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "hairline-soft-dark": {
+        "role": "neutral",
+        "displayName": "Soft Hairline (dark)",
+        "canonical": "#2c2c30",
+        "tonalRamp": [
+          "oklch(15% 0.002 285)",
+          "oklch(26% 0.003 285)",
+          "oklch(38% 0.004 285)",
+          "oklch(49% 0.005 285)",
+          "oklch(61% 0.005 285)",
+          "oklch(72% 0.004 285)",
+          "oklch(84% 0.003 285)",
+          "oklch(95% 0.002 285)"
+        ]
+      },
+      "signal-blue-dark": {
+        "role": "primary",
+        "displayName": "Signal Blue (dark text)",
+        "canonical": "#2997ff",
+        "tonalRamp": [
+          "oklch(15% 0.049 253)",
+          "oklch(26% 0.085 253)",
+          "oklch(38% 0.124 253)",
+          "oklch(49% 0.16 253)",
+          "oklch(61% 0.16 253)",
+          "oklch(72% 0.124 253)",
+          "oklch(84% 0.085 253)",
+          "oklch(95% 0.049 253)"
+        ]
+      },
+      "signal-field-dark": {
+        "role": "primary",
+        "displayName": "Signal Field (dark)",
+        "canonical": "#0a5cc4",
+        "tonalRamp": [
+          "oklch(15% 0.052 257)",
+          "oklch(26% 0.09 257)",
+          "oklch(38% 0.131 257)",
+          "oklch(49% 0.169 257)",
+          "oklch(61% 0.169 257)",
+          "oklch(72% 0.131 257)",
+          "oklch(84% 0.09 257)",
+          "oklch(95% 0.052 257)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The thesis band title only, white on signal blue."
+      },
+      "hero": {
+        "displayName": "Hero (pinned)",
+        "purpose": "The brand-pinned hero heading with rotating phrase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles sitting on an ink hairline."
+      },
+      "contact-heading": {
+        "displayName": "Contact Heading (pinned)",
+        "purpose": "\"Let's talk.\" in its brand-pinned treatment."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project names in the index."
+      },
+      "fact": {
+        "displayName": "Fact",
+        "purpose": "Values in the ruled fact strip."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, tabular numerals."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "The hero introduction paragraph."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sentence-case fact-strip terms in graphite."
+      }
+    },
+    "shadows": [
+      {
+        "name": "avatar-keyline",
+        "value": "0 0 0 3px var(--paper), 0 0 0 4px var(--rule)",
+        "purpose": "Printed keyline ring around the avatar; the only box-shadow, not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "spring",
+        "value": "cubic-bezier(.22, 1, .36, 1)",
+        "purpose": "All fills, sweeps, underline draws and nudges."
+      },
+      {
+        "name": "hairline-draw",
+        "value": "transform 1.2s cubic-bezier(.16, 1, .3, 1) .05s",
+        "purpose": "Section-title hairline drawing in once on arrival."
+      },
+      {
+        "name": "row-sweep",
+        "value": "transform .55s var(--spring)",
+        "purpose": "Project index row blue fill, left to right."
+      },
+      {
+        "name": "cta-sweep",
+        "value": "transform .5s var(--spring)",
+        "purpose": "Ink panel sweeping across the Email me field."
+      },
+      {
+        "name": "hero-enter (pinned)",
+        "value": "enter .9s var(--spring), delay i*70ms+80ms; from opacity 0, translateY(16px) scale(.985) blur(6px)",
+        "purpose": "Brand-pinned staggered hero entrance."
+      },
+      {
+        "name": "rotator (pinned)",
+        "value": "out .38s ease / in .55s var(--spring), blur 6px, every 2.8s",
+        "purpose": "Brand-pinned rotating phrase."
+      },
+      {
+        "name": "caret (pinned)",
+        "value": "caretBlink 1.05s steps(1) infinite",
+        "purpose": "Brand-pinned blinking caret."
+      },
+      {
+        "name": "medal-sway",
+        "value": "sway 3.2s / 3.6s ease-in-out infinite, rotate ±6deg",
+        "purpose": "Medal SVGs swinging on offset loops."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all animation and transition off",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "960px"
+      },
+      {
+        "name": "sm",
+        "value": "620px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Email Me Field",
+      "kind": "button",
+      "refersTo": "cta-field",
+      "description": "Primary action: a solid blue cell at the end of the fact strip; ink sweeps in on hover.",
+      "html": "<a class=\"ds-cta\" href=\"#\">Email me <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path d=\"M5 19 19 5M8 5h11v11\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-cta{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;width:240px;min-height:72px;padding:16px 18px 18px;background:var(--field);color:var(--on-accent);font:700 20px/1.1 var(--f-display);letter-spacing:-.02em;text-decoration:none;overflow:hidden;isolation:isolate}.ds-cta::before{content:'';position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--spring);z-index:-1}.ds-cta:hover::before,.ds-cta:focus-visible::before{transform:scaleX(1)}.ds-cta svg{transition:transform .4s var(--spring)}.ds-cta:hover svg{transform:translate(3px,-3px)}.ds-cta:focus-visible{outline:2px solid var(--accent);outline-offset:3px}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "outline-button",
+      "description": "Secondary action (Copy): square, 1px ink border, fills ink on hover.",
+      "html": "<button class=\"ds-btn-outline\" type=\"button\">Copy</button>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-btn-outline{font:600 15px var(--f-text);padding:10px 18px;border:1px solid var(--rule);border-radius:0;background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}.ds-btn-outline:hover{background:var(--ink);color:var(--paper)}.ds-btn-outline:focus-visible{outline:2px solid var(--accent);outline-offset:3px}"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "top-bar",
+      "description": "Sticky ruled bar: name left, links right with drawn blue underline, square theme toggle.",
+      "html": "<header class=\"ds-bar\"><a class=\"ds-brand\" href=\"#\">Aditya Raj</a><nav class=\"ds-links\"><a href=\"#\" class=\"on\">Work</a><a href=\"#\">Projects</a><a href=\"#\">Contact</a></nav><button class=\"ds-theme\" aria-label=\"Theme\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\"><path fill=\"currentColor\" d=\"M12.3 3a9 9 0 1 0 8.7 11.2A7.2 7.2 0 0 1 12.3 3Z\"/></svg></button></header>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-bar{display:flex;align-items:center;gap:28px;height:56px;padding:0 20px;background:var(--paper);color:var(--ink);border-bottom:1px solid var(--rule);font-family:var(--f-text)}.ds-brand{font:800 16px var(--f-display);letter-spacing:-.02em;margin-right:auto;color:inherit;text-decoration:none}.ds-links{display:flex;gap:26px}.ds-links a{position:relative;font-size:15px;font-weight:500;padding-block:4px;color:inherit;text-decoration:none}.ds-links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--spring)}.ds-links a:hover::after,.ds-links a.on::after{transform:scaleX(1)}.ds-theme{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;transition:background .2s,color .2s}.ds-theme:hover{background:var(--ink);color:var(--paper)}"
+    },
+    {
+      "name": "Project Index Row",
+      "kind": "custom",
+      "refersTo": "index-row",
+      "description": "Signature: a ruled row that fills with a left-to-right blue sweep on hover/focus, text turning white.",
+      "html": "<ul class=\"ds-index\"><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-name\">PlayConnect</span><span class=\"ds-what\"><strong>Find colleagues who play your sport.</strong> Mobile app with profiles and search.</span><span class=\"ds-stack\">Node.js · PostgreSQL · Flutter</span><span class=\"ds-go\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path d=\"M5 19 19 5M8 5h11v11\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg></span></a></li></ul>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-index{list-style:none;margin:0;padding:0 14px;font-family:var(--f-text);color:var(--ink)}.ds-index li{border-bottom:1px solid var(--rule)}.ds-row{position:relative;isolation:isolate;display:grid;grid-template-columns:3fr 5fr 3fr 40px;column-gap:24px;align-items:baseline;padding:22px 0;color:inherit;text-decoration:none;transition:color .3s ease}.ds-row::before{content:'';position:absolute;inset:0 -14px;background:var(--field);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--spring);z-index:-1}.ds-row:hover,.ds-row:focus-visible{color:var(--on-accent);outline:none}.ds-row:hover::before,.ds-row:focus-visible::before{transform:scaleX(1)}.ds-name{font:800 1.6rem/1.05 var(--f-display);letter-spacing:-.03em}.ds-what{font-size:16px;color:var(--ink-2);transition:color .3s}.ds-what strong{color:var(--ink);font-weight:600}.ds-stack{font-size:14px;color:var(--ink-2);transition:color .3s}.ds-row:hover .ds-what,.ds-row:hover .ds-stack,.ds-row:hover .ds-what strong,.ds-row:focus-visible .ds-what,.ds-row:focus-visible .ds-stack,.ds-row:focus-visible .ds-what strong{color:var(--on-accent)}.ds-go{justify-self:end;align-self:center}.ds-go svg{transition:transform .45s var(--spring)}.ds-row:hover .ds-go svg{transform:translate(3px,-3px)}"
+    },
+    {
+      "name": "Fact Strip",
+      "kind": "card",
+      "refersTo": "cta-field",
+      "description": "Ruled definition-list cells between ink hairlines, ending in the blue Email me field.",
+      "html": "<dl class=\"ds-facts\"><div><dt>Role</dt><dd>Software Engineer</dd></div><div><dt>Company</dt><dd>Ethara AI</dd></div><a class=\"ds-f-cta\" href=\"#\">Email me <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path d=\"M5 19 19 5M8 5h11v11\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\"/></svg></a></dl>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-facts{display:grid;grid-template-columns:1fr 1fr 1.1fr;margin:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);font-family:var(--f-text);color:var(--ink)}.ds-facts>div{padding:16px 18px 18px;border-right:1px solid var(--rule)}.ds-facts>div:first-child{padding-left:0}.ds-facts dt{font-size:13px;color:var(--ink-2);margin-bottom:4px}.ds-facts dd{margin:0;font:700 18px/1.25 var(--f-display);letter-spacing:-.015em}.ds-f-cta{display:flex;align-items:flex-end;justify-content:space-between;padding:16px 18px 18px;background:var(--field);color:var(--on-accent);font:700 20px/1.1 var(--f-display);letter-spacing:-.02em;text-decoration:none;transition:background .3s}.ds-f-cta:hover{background:var(--ink)}"
+    },
+    {
+      "name": "Section Title",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Heavy grotesk title on a full-width ink hairline that draws in from the left.",
+      "html": "<h2 class=\"ds-sec\">Projects</h2>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-sec{position:relative;margin:0;padding-bottom:22px;font:800 3rem/1 var(--f-display);letter-spacing:-.035em;color:var(--ink)}.ds-sec::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--rule);transform-origin:left;animation:ds-draw 1.2s cubic-bezier(.16,1,.3,1) both}@keyframes ds-draw{from{transform:scaleX(0)}}"
+    },
+    {
+      "name": "Thesis Band",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Full-bleed blue field with the display title and white-ruled text columns.",
+      "html": "<section class=\"ds-thesis\"><h2>Builds it.<br>Tests it.</h2><div class=\"ds-col\"><h3>Builds</h3><p>Full-stack web apps from the database to the interface.</p></div></section>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-thesis{display:grid;grid-template-columns:7fr 5fr;column-gap:24px;align-items:end;padding:56px 20px;background:var(--field);color:var(--on-accent)}.ds-thesis h2{margin:0;font:800 4.5rem/.9 var(--f-display);letter-spacing:-.04em}.ds-col{border-top:1px solid currentColor;padding-top:14px;font-family:var(--f-text)}.ds-col h3{margin:0 0 6px;font:700 15px var(--f-display)}.ds-col p{margin:0;font-size:18px;font-weight:500;line-height:1.5}"
+    },
+    {
+      "name": "Certification Link",
+      "kind": "chip",
+      "refersTo": "body",
+      "description": "Ruled link list: name left, issuer right; hover turns blue and slides 8px.",
+      "html": "<ul class=\"ds-certs\"><li><a href=\"#\"><span>Java Fundamentals</span><span class=\"v\">IBM</span></a></li><li><a href=\"#\"><span>AWS Workshop</span><span class=\"v\">GRAStech</span></a></li></ul>",
+      "css": ":host{--paper:#fff;--ink:#111;--ink-2:#4a4a4f;--rule:#111;--rule-soft:#d9d9de;--accent:#0071e3;--field:#0071e3;--on-accent:#fff;--spring:cubic-bezier(.22,1,.36,1);--f-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',system-ui,sans-serif;--f-text:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif} .ds-certs{list-style:none;margin:0;padding:0;font:17px/1.55 var(--f-text);color:var(--ink);border-top:1px solid var(--rule)}.ds-certs li{border-bottom:1px solid var(--rule-soft)}.ds-certs a{display:flex;justify-content:space-between;gap:16px;padding:12px 0;color:inherit;text-decoration:none;font-weight:500;transition:color .2s,padding .35s var(--spring)}.ds-certs a:hover{color:var(--accent);padding-left:8px}.ds-certs .v{color:var(--ink-2);font-size:15px;font-weight:400}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Recruiter's Timetable",
+    "overview": "A Swiss International Style poster built to be read in thirty seconds. White paper, near-black ink, 1px ink hairlines that divide the page into a visible grid, and a single signal blue that never appears as a sprinkle: it arrives as whole fields (the \"Email me\" block, the \"Builds it. Tests it.\" band, a project row filling on hover). Everything is flush-left and ragged-right, set on a 12-column logic inside a 1200px measure, so the eye runs down the page the way it runs down a departure board: label, value, rule, next.\n\nDensity is high but calm. Information sits in ruled cells (the four-cell fact strip, five skills columns, the project index) rather than in cards; structure is drawn with lines, not boxes. Heavy grotesk headings carry the voice; Hanken Grotesk carries the reading. The page refuses the glass-card developer portfolio it replaced: no glass, no backdrop blur, no rounded tiles, no drop shadows, no gradients as surfaces.\n\nLight is the default and the authored state. Dark exists only behind the toggle and is a faithful inversion (ink paper, light ink, light hairlines, a deeper blue field), not a separate mood.",
+    "keyCharacteristics": [
+      "Paper ground, ink type, 1px ink hairlines as the primary structural device.",
+      "One signal blue, used as solid fields and as the pinned rotating phrase; never as tints or accents scattered across text.",
+      "Heavy grotesk display type with tight negative tracking; Hanken Grotesk body at 17px.",
+      "Square corners everywhere except the avatar circle, the status dot and the medal discs.",
+      "Motion is a left-to-right fill or draw: hover fills, hairlines that draw in, underlines that extend."
+    ],
+    "rules": [
+      {
+        "name": "The Whole-Field Rule",
+        "body": "Signal blue appears as a solid field or as a single pinned text role, never as a tint, gradient, glow, badge or scattered highlight. If a new element wants blue, it gets the whole cell.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Weight Hairline Rule",
+        "body": "Ink hairlines (1px `ink`) bound a block: top bar, fact strip, section titles, sub-titles, the last project row, contact and footer. Soft hairlines (1px `hairline-soft`) divide items within a block. Never invert the two.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pinned Grotesk Rule",
+        "body": "The hero heading and \"Let's talk.\" keep the system grotesk stack at exactly their recorded size, weight and tracking. They are brand commitments, not tokens to tune.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence-Case Rule",
+        "body": "No uppercase labels, no letter-spaced small caps. Labels are short sentence-case words in graphite, and hierarchy comes from weight and size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Print Rule",
+        "body": "If it would not survive being printed in two inks on paper, it does not belong: no shadows, glows, glass, backdrop-filter or gradient surfaces. (The pinned hero motion's transient blur is animation, not material, and is exempt.)",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** build structure with 1px hairlines: ink to bound a block, soft hairline to divide items inside it.",
+      "**Do** use signal blue as a whole field (a cell, a band, a full-row sweep) or as the pinned text accent, with white type on fields.",
+      "**Do** keep every corner square; reserve circles for the avatar, the status dot and medal discs.",
+      "**Do** set headings in the display stack at 700–800 with negative tracking (-0.015em to -0.04em), and body in Hanken Grotesk at 17px/1.55.",
+      "**Do** align the first cell of any ruled row flush to the gutter, flush-left and ragged-right.",
+      "**Do** animate as a left-to-right fill or draw on `cubic-bezier(.22, 1, .36, 1)`, and drop all motion under `prefers-reduced-motion`.",
+      "**Do** keep light as the default theme; dark only through the toggle, with the deeper `signal-field-dark` behind white text.",
+      "**Do** leave the hero heading, rotating phrase, caret, staggered entrance and \"Let's talk.\" exactly as recorded."
+    ],
+    "donts": [
+      "**Don't** use glass, backdrop blur, drop shadows, glows or gradient surfaces.",
+      "**Don't** put content in rounded cards or tiles; use ruled cells and rows.",
+      "**Don't** tint blue into pale backgrounds, badges or scattered highlights.",
+      "**Don't** add uppercase, letter-spaced eyebrows or kickers above headings.",
+      "**Don't** centre-align blocks; the page reads flush-left.",
+      "**Don't** introduce a second accent colour; green is the status dot only."
+    ]
+  }
+}
