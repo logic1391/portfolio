@@ -263,3 +263,93 @@ a.card:hover .card-link span { transform: translateX(4px); }
   .l-val { margin-left: 0; text-align: left; flex-basis: 100%; }
   .chev { display: none; }
 }
+
+/* ===== Motion & glow layer ===== */
+:root { --glow-a: .34; --glow-a-hover: .55; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --glow-a: .45; --glow-a-hover: .7; } }
+:root[data-theme="dark"] { --glow-a: .45; --glow-a-hover: .7; }
+
+/* Tint per tile; the glow sits under each tile and brightens on hover */
+.glass { position: relative; --tint: #7aa7ff; }
+.widget:nth-child(1), .xp, .list { --tint: #5b9dff; }
+.widget:nth-child(2) { --tint: #a27bff; }
+.widget:nth-child(3) { --tint: #ff9f6b; }
+.widget:nth-child(4) { --tint: #3ccf7a; }
+.projects > :nth-child(1) { --tint: #34c759; }
+.projects > :nth-child(2) { --tint: #ff4d5e; }
+.projects > :nth-child(3) { --tint: #ff9f0a; }
+.contact { --tint: #8e7bff; }
+.widget, .card, .panel, .list {
+  box-shadow: inset 0 1px 0 var(--glass-hi), var(--shadow),
+              0 22px 44px -18px color-mix(in srgb, var(--tint) calc(var(--glow-a) * 100%), transparent);
+  transition: transform .55s var(--spring), box-shadow .5s ease, translate .55s var(--spring);
+}
+.widget:hover, a.card:hover, .panel:hover, .list:hover {
+  box-shadow: inset 0 1px 0 var(--glass-hi), var(--shadow),
+              0 30px 60px -16px color-mix(in srgb, var(--tint) calc(var(--glow-a-hover) * 100%), transparent);
+}
+
+/* Light sheen that follows the pointer across glass */
+.glass::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, -40%), rgba(255,255,255,.22), transparent 55%);
+  opacity: 0; transition: opacity .4s ease;
+}
+.glass:hover::after { opacity: 1; }
+
+/* Widgets drift very gently, each on its own rhythm */
+.widget { animation: enter .9s var(--spring) both, drift 7s ease-in-out infinite alternate; animation-delay: calc(var(--i, 0) * 70ms + 80ms), calc(var(--i, 0) * -1.3s); }
+@keyframes drift { from { translate: 0 0; } to { translate: 0 -5px; } }
+
+/* Clock colon ticks */
+.colon { animation: tickc 2s steps(1) infinite; }
+@keyframes tickc { 50% { opacity: .25; } }
+
+/* Avatar halo */
+.avatar { animation: halo 3.6s ease-in-out infinite; }
+@keyframes halo {
+  0%, 100% { box-shadow: 0 0 0 3px var(--glass-strong), 0 6px 20px rgba(0,0,0,.15), 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); }
+  50% { box-shadow: 0 0 0 3px var(--glass-strong), 0 6px 20px rgba(0,0,0,.15), 0 0 0 9px color-mix(in srgb, var(--accent) 14%, transparent); }
+}
+.live { animation: livep 2.2s ease-in-out infinite; }
+@keyframes livep { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--live) 0%, transparent); } }
+
+/* Items inside a section settle one after another (always visible) */
+.reveal .projects > *, .reveal .list li, .reveal .xp-list li, .reveal .contact > * {
+  transform: translateY(22px) scale(.985);
+  transition: transform .9s var(--spring), box-shadow .5s ease, translate .55s var(--spring);
+  transition-delay: calc(var(--n, 0) * 60ms);
+}
+.reveal.visible .projects > *, .reveal.visible .list li, .reveal.visible .xp-list li, .reveal.visible .contact > * { transform: none; }
+.reveal.visible a.card:hover { transform: translateY(-6px); transition-delay: 0s; }
+
+/* Section titles get a short accent line that draws in */
+.sec-title::after {
+  content: ""; display: block; width: 36px; height: 3px; border-radius: 3px; margin-top: 10px;
+  background: var(--accent); transform-origin: left; transform: scaleX(.15);
+  transition: transform 1s var(--spring) .15s;
+}
+.reveal.visible .sec-title::after { transform: none; }
+
+/* Primary button: soft light sweep on hover */
+.pill-primary { position: relative; overflow: hidden; }
+.pill-primary::before {
+  content: ""; position: absolute; inset: 0; transform: translateX(-120%);
+  background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);
+}
+.pill-primary:hover::before { transform: translateX(120%); transition: transform .8s ease; }
+
+/* App icons tilt slightly on card hover */
+.card .app-icon { transition: transform .6s var(--spring); }
+a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
+
+/* Wallpaper orbs also breathe */
+.orb { animation-name: var(--float), breathe; }
+.o1 { --float: float1; } .o2 { --float: float2; } .o3 { --float: float3; }
+.o1, .o2, .o3 { animation-duration: 32s, 9s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; }
+@keyframes breathe { to { opacity: .55; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .projects > *, .reveal .list li, .reveal .xp-list li, .reveal .contact > * { transform: none; }
+  .sec-title::after { transform: none; }
+}

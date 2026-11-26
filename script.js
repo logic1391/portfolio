@@ -46,7 +46,8 @@ const clockDate = document.getElementById("clockDate");
 const tick = () => {
   try {
     const now = new Date();
-    clock.textContent = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }).format(now);
+    const [hh, mm] = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }).format(now).split(":");
+    clock.innerHTML = `${hh}<span class="colon">:</span>${mm}`;
     clockDate.textContent = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "short", timeZone: "Asia/Kolkata" }).format(now);
   } catch (e) {}
 };
@@ -72,3 +73,17 @@ if ("IntersectionObserver" in window) {
   }), { threshold: 0.06 });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 }
+
+// Stagger index for items that settle in one after another
+document.querySelectorAll(".projects, .list, .xp-list, .contact").forEach((group) => {
+  [...group.children].forEach((el, n) => el.style.setProperty("--n", n));
+});
+
+// Pointer-following sheen on glass surfaces
+document.querySelectorAll(".glass").forEach((el) => {
+  el.addEventListener("pointermove", (e) => {
+    const r = el.getBoundingClientRect();
+    el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    el.style.setProperty("--my", `${e.clientY - r.top}px`);
+  });
+});
