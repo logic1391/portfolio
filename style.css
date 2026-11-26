@@ -386,3 +386,21 @@ a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
 .widget > .w-sub:last-child { margin-bottom: auto; }
 .widget .medals + .w-title { margin-top: auto; }
 .widget:has(.medals) > .w-sub:last-child { margin-bottom: 0; }
+
+/* Softer hover light + small, consistent hover lift on every tile */
+:root { --glow-a-hover: .2; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --glow-a-hover: .27; } }
+:root[data-theme="dark"] { --glow-a-hover: .27; }
+.glass::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, -40%), rgba(255,255,255,.1), transparent 55%); }
+
+.widget, .card, .panel, .list {
+  transition: transform .55s var(--spring), translate .55s var(--spring), scale .5s var(--spring), box-shadow .5s ease;
+}
+.widget:hover { transform: translateY(-3px); scale: 1.015; }
+.reveal.visible a.card:hover, a.card:hover { transform: translateY(-4px); scale: 1.01; }
+.card:not(a):hover { scale: 1.01; }
+.panel:hover, .list:hover { scale: 1.004; }
+.widget:active, a.card:active { scale: .99; }
+.app-icon, .medals { transition: transform .6s var(--spring); }
+.panel:hover .app-icon { transform: rotate(-4deg) scale(1.04); }
+.widget:hover .medals { transform: translateY(-2px); }
