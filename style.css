@@ -1,6 +1,6 @@
 /* Layout: floating glass nav bar; left-aligned hero; row of iOS-style widgets;
    frosted panels for experience, project cards and Settings-style grouped lists,
-   all over a soft blurred "wallpaper". Light-first, with a matching dark appearance. */
+   over a calm, softly lit background. Light-first, with a matching dark appearance. */
 :root {
   --bg: #eef0f5;
   --ink: #1d1d1f;
@@ -15,9 +15,6 @@
   --glass-hi: rgba(255, 255, 255, .9);
   --hairline: rgba(60, 60, 67, .14);
   --shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 12px 40px rgba(16, 24, 40, .08);
-  --orb-1: #9ec5ff;
-  --orb-2: #d9c2ff;
-  --orb-3: #ffd3b8;
   --f-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", system-ui, sans-serif;
   --f-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif;
   --r-lg: 28px;
@@ -32,7 +29,6 @@
     --glass-edge: rgba(255, 255, 255, .12); --glass-hi: rgba(255, 255, 255, .14);
     --hairline: rgba(255, 255, 255, .1);
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 16px 48px rgba(0,0,0,.4);
-    --orb-1: #1f4fa8; --orb-2: #4b2a86; --orb-3: #7a3b2a;
     color-scheme: dark;
   }
 }
@@ -43,7 +39,6 @@
   --glass-edge: rgba(255, 255, 255, .12); --glass-hi: rgba(255, 255, 255, .14);
   --hairline: rgba(255, 255, 255, .1);
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 16px 48px rgba(0,0,0,.4);
-  --orb-1: #1f4fa8; --orb-2: #4b2a86; --orb-3: #7a3b2a;
   color-scheme: dark;
 }
 
@@ -68,13 +63,6 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; }
 
 /* Wallpaper */
 .wallpaper { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-.orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; }
-.o1 { width: 52vmax; height: 52vmax; background: var(--orb-1); top: -20vmax; left: -12vmax; animation: float1 32s ease-in-out infinite alternate; }
-.o2 { width: 44vmax; height: 44vmax; background: var(--orb-2); top: 10vmax; right: -16vmax; animation: float2 38s ease-in-out infinite alternate; }
-.o3 { width: 36vmax; height: 36vmax; background: var(--orb-3); bottom: -16vmax; left: 24vmax; animation: float3 34s ease-in-out infinite alternate; }
-@keyframes float1 { to { transform: translate(8vmax, 6vmax); } }
-@keyframes float2 { to { transform: translate(-6vmax, 10vmax); } }
-@keyframes float3 { to { transform: translate(-10vmax, -6vmax); } }
 
 /* Glass material */
 .glass {
@@ -343,11 +331,6 @@ a.card:hover .card-link span { transform: translateX(4px); }
 .card .app-icon { transition: transform .6s var(--spring); }
 a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
 
-/* Wallpaper orbs also breathe */
-.orb { animation-name: var(--float), breathe; }
-.o1 { --float: float1; } .o2 { --float: float2; } .o3 { --float: float3; }
-.o1, .o2, .o3 { animation-duration: 32s, 9s; animation-timing-function: ease-in-out; animation-iteration-count: infinite; animation-direction: alternate; }
-@keyframes breathe { to { opacity: .55; } }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal .projects > *, .reveal .xp-list li, .reveal .contact > * { transform: none; }
@@ -404,3 +387,81 @@ a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
 .app-icon, .medals { transition: transform .6s var(--spring); }
 .panel:hover .app-icon { transform: rotate(-4deg) scale(1.04); }
 .widget:hover .medals { transform: translateY(-2px); }
+
+/* ===== Background: calm studio light instead of floating blobs ===== */
+:root {
+  --wp-top: #f8f8fa; --wp-bottom: #eceef2;
+  --wp-light: rgba(255,255,255,.95);
+  --wp-tint-1: rgba(168,196,255,.32);
+  --wp-tint-2: rgba(255,214,192,.26);
+  --noise-o: .045;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --wp-top: #101116; --wp-bottom: #08080b;
+    --wp-light: rgba(120,130,170,.18);
+    --wp-tint-1: rgba(60,90,170,.22);
+    --wp-tint-2: rgba(140,80,120,.14);
+    --noise-o: .06;
+  }
+}
+:root[data-theme="dark"] {
+  --wp-top: #101116; --wp-bottom: #08080b;
+  --wp-light: rgba(120,130,170,.18);
+  --wp-tint-1: rgba(60,90,170,.22);
+  --wp-tint-2: rgba(140,80,120,.14);
+  --noise-o: .06;
+}
+body { background: var(--wp-bottom); }
+.wallpaper {
+  background:
+    radial-gradient(1100px 520px at 50% -160px, var(--wp-light), transparent 70%),
+    radial-gradient(760px 520px at 88% 6%, var(--wp-tint-1), transparent 65%),
+    radial-gradient(680px 480px at 6% 34%, var(--wp-tint-2), transparent 65%),
+    linear-gradient(180deg, var(--wp-top), var(--wp-bottom) 70%);
+}
+.wallpaper::after {
+  content: ""; position: absolute; inset: 0; opacity: var(--noise-o);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===== Bigger profile photo ===== */
+.avatar { width: 92px; height: 92px; }
+.who { gap: 18px; }
+.who-name { font-size: 20px; font-weight: 700; }
+.who-sub { font-size: 15px; }
+@media (max-width: 620px) { .avatar { width: 78px; height: 78px; } }
+
+/* ===== Widget headings in a translucent glass capsule with a light-catching edge ===== */
+.w-label {
+  align-self: flex-start; display: inline-flex; align-items: center;
+  font-size: 15px; font-weight: 600; letter-spacing: -.01em; color: var(--accent);
+  padding: 6px 14px; border-radius: 999px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--label-fill), var(--label-fill)) padding-box,
+    linear-gradient(135deg, var(--label-edge-hi), var(--label-edge-lo) 45%, var(--label-edge-hi) 100%) border-box;
+  -webkit-backdrop-filter: blur(14px) saturate(160%); backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: inset 0 1px 0 var(--label-edge-hi), 0 2px 8px rgba(16,24,40,.06);
+  position: relative; overflow: hidden;
+}
+.w-label::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(110deg, transparent 35%, rgba(255,255,255,.55) 50%, transparent 65%);
+  transform: translateX(-130%); animation: labelShine 7s ease-in-out infinite;
+}
+.widget:nth-child(2) .w-label::after { animation-delay: 1.2s; }
+.widget:nth-child(3) .w-label::after { animation-delay: 2.4s; }
+.widget:nth-child(4) .w-label::after { animation-delay: 3.6s; }
+@keyframes labelShine { 0%, 70% { transform: translateX(-130%); } 100% { transform: translateX(130%); } }
+:root { --label-fill: rgba(255,255,255,.5); --label-edge-hi: rgba(255,255,255,.95); --label-edge-lo: rgba(255,255,255,.25); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --label-fill: rgba(255,255,255,.07); --label-edge-hi: rgba(255,255,255,.32); --label-edge-lo: rgba(255,255,255,.05); } }
+:root[data-theme="dark"] { --label-fill: rgba(255,255,255,.07); --label-edge-hi: rgba(255,255,255,.32); --label-edge-lo: rgba(255,255,255,.05); }
+:root { --label-ink: var(--accent); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --label-ink: #7cc0ff; --label-fill: rgba(255,255,255,.045); } }
+:root[data-theme="dark"] { --label-ink: #7cc0ff; --label-fill: rgba(255,255,255,.045); }
+.w-label { color: var(--label-ink); white-space: nowrap; }
+@media (max-width: 620px) {
+  .w-label { font-size: 13px; padding: 5px 11px; }
+  .medals { margin-bottom: 8px; }
+}
