@@ -369,11 +369,14 @@ a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
 .w-company { font: 800 1.55rem/1.1 var(--f-display); letter-spacing: -.03em; margin-top: auto; }
 .w-role { font-size: 15px; font-weight: 400; color: var(--ink); margin-top: 4px; }
 
-/* Football tile */
-.ball { color: var(--ink); margin: 14px 0 0; animation: roll 4.5s var(--spring) infinite; transform-origin: 50% 50%; }
-@keyframes roll {
-  0%, 100% { transform: translateX(0) rotate(0deg); }
-  45% { transform: translateX(14px) rotate(120deg); }
-  55% { transform: translateX(14px) rotate(120deg); }
-}
 .widgets > :nth-child(1) { --tint: #34c759; }
+
+/* Medals tile: two medals sway on their ribbons and catch the light */
+.medals { display: flex; gap: 14px; margin-top: 8px; }
+.medal { transform-origin: 50% 0; animation: sway 3.2s ease-in-out infinite; filter: drop-shadow(0 4px 6px rgba(0,0,0,.15)); }
+.medal + .medal { animation-delay: -1.6s; animation-duration: 3.6s; }
+@keyframes sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+.medal .shine { animation: shine 4s ease-in-out infinite; }
+.medal + .medal .shine { animation-delay: 2s; }
+@keyframes shine { 0%, 55% { transform: translateX(0); } 100% { transform: translateX(75px); } }
+.widget:hover .medal { animation-duration: 1.4s; }
