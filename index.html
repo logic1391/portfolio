@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Aditya Raj · Portfolio</title>
+  <meta name="description" content="Aditya Raj — Full-Stack Developer working on AI agent benchmarking and LLM evaluation. Node.js, Python, Docker, React." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="grid-fade"></span></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-pill">
+      <a href="#top" class="brand">
+        <img src="avatar.jpg" alt="" width="28" height="28" />
+        <span>Aditya Raj</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="id-row load" style="--d:0">
+        <div class="avatar">
+          <img src="avatar.jpg" alt="Aditya Raj" width="400" height="400" />
+          <span class="status" title="Open to opportunities"></span>
+        </div>
+        <div>
+          <p class="id-name">Aditya Raj</p>
+          <p class="id-role">Full-Stack Developer at <strong>Ethara AI</strong></p>
+        </div>
+      </div>
+
+      <h1 class="load" style="--d:1">
+        I build <span class="rotator" id="rotator"><span class="rot-word">full-stack apps</span></span><br />
+        and test how well AI&nbsp;agents&nbsp;code.
+      </h1>
+
+      <p class="lead load" style="--d:2">
+        I design APIs and databases, ship web apps end to end, and run Docker-based
+        benchmarks that measure whether an LLM agent's code fix actually works.
+      </p>
+
+      <div class="cta load" style="--d:3">
+        <a href="#projects" class="btn btn-solid">See my projects <span class="arrow">→</span></a>
+        <a href="resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download résumé</a>
+        <span class="avail"><span class="pulse"></span> Open to opportunities</span>
+      </div>
+    </section>
+
+    <!-- BENTO -->
+    <section class="bento" aria-label="At a glance">
+      <article class="tile t-term load" style="--d:4">
+        <div class="tile-head"><span class="dots"><i></i><i></i><i></i></span><span>eval · example task</span></div>
+<pre class="term"><span class="ln"><span class="m">$</span> run-eval --task repo-1423</span>
+<span class="ln"><span class="m">baseline </span>  <span class="f">FAIL</span>  test_parse_dates</span>
+<span class="ln"><span class="m">fix-patch</span>  <span class="p">PASS</span>  test_parse_dates</span>
+<span class="ln"><span class="m">fix-patch</span>  <span class="p">PASS</span>  42 existing tests</span>
+<span class="ln"> </span>
+<span class="ln"><span class="p">f2p</span> 1   <span class="m">fail → pass</span></span>
+<span class="ln"><span class="p">p2p</span> 42  <span class="m">no regressions</span></span>
+<span class="ln">verdict <span class="p">RESOLVED ✓</span><span class="cursor"></span></span></pre>
+        <p class="tile-note">How a model's fix gets scored — the kind of pipeline I work on.</p>
+      </article>
+
+      <article class="tile t-loc load" style="--d:5">
+        <p class="tile-label">Based in</p>
+        <p class="tile-big">Varanasi, India</p>
+        <p class="clock"><span id="clock">--:--</span> <span class="m">IST</span></p>
+      </article>
+
+      <article class="tile t-edu load" style="--d:6">
+        <p class="tile-label">Education</p>
+        <p class="tile-big">B.Tech, CSE (CC &amp; ML)</p>
+        <p class="m">Babu Banarasi Das University · 2022–2026</p>
+      </article>
+
+      <article class="tile t-stack load" style="--d:7">
+        <p class="tile-label">Daily stack</p>
+        <div class="marquee" aria-label="Python, Node.js, React, PostgreSQL, Docker, FastAPI, Next.js, AWS, Linux, GitHub Actions">
+          <div class="marquee-track">
+            <span>Python</span><span>Node.js</span><span>React</span><span>PostgreSQL</span><span>Docker</span><span>FastAPI</span><span>Next.js</span><span>AWS</span><span>Linux</span><span>GitHub Actions</span>
+            <span aria-hidden="true">Python</span><span aria-hidden="true">Node.js</span><span aria-hidden="true">React</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Docker</span><span aria-hidden="true">FastAPI</span><span aria-hidden="true">Next.js</span><span aria-hidden="true">AWS</span><span aria-hidden="true">Linux</span><span aria-hidden="true">GitHub Actions</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile t-ball load" style="--d:8">
+        <span class="ball" aria-hidden="true">⚽</span>
+        <p class="tile-label">Off the keyboard</p>
+        <p class="tile-big">Football</p>
+        <p class="m">Silver · Inter-College &nbsp;·&nbsp; Bronze · District</p>
+      </article>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="work" class="section reveal">
+      <h2 class="sec-title"><span class="sec-tag">Experience</span>Where I work</h2>
+      <div class="xp">
+        <div class="xp-side">
+          <p class="xp-date">May 2026 — Present</p>
+          <p class="m">Gurugram, India</p>
+        </div>
+        <div class="xp-body">
+          <h3>Full-Stack Developer · <span class="hl">Ethara AI</span></h3>
+          <p class="xp-sum">On the <strong>Long Horizon Terminal Benchmarking (LHTB)</strong> project, testing LLM-based agents on complex, repository-level software engineering tasks.</p>
+          <ul class="bullets">
+            <li>Build repository-specific Docker images on Linux, set up dependencies, apply code patches and run tests in isolated environments.</li>
+            <li>Score model-generated fixes against ground-truth patches by comparing baseline, test-patch and fix-patch runs.</li>
+            <li>Turn raw test logs into structured results: passed, failed, skipped and error.</li>
+            <li>Track test-state transitions (f2p, s2p, n2p, p2p) to find resolved issues, regressions and failed fixes.</li>
+            <li>Support the evaluation harnesses and reports used to judge how reliable AI coding agents are.</li>
+          </ul>
+          <ul class="chips"><li>Docker</li><li>Linux</li><li>Python</li><li>LLM evaluation</li><li>Test analysis</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2 class="sec-title"><span class="sec-tag">Projects</span>Things I've built</h2>
+      <div class="projects">
+        <a class="project glow" href="https://github.com/logic1391/PlayConnect" target="_blank" rel="noopener">
+          <div class="p-top"><span class="p-kind">Mobile app + REST API</span><span class="p-go" aria-hidden="true">↗</span></div>
+          <h3>PlayConnect</h3>
+          <p>Helps colleagues find people who play the same sport and message them on WhatsApp. Node.js and PostgreSQL backend with sign-up, profiles, search by sport and availability, and an admin panel. JWT auth, deployed on Vercel with Neon, tested on every push with GitHub Actions.</p>
+          <ul class="chips"><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>JWT</li><li>Flutter</li></ul>
+        </a>
+        <a class="project glow" href="https://github.com/logic1391/Disease_Prediction" target="_blank" rel="noopener">
+          <div class="p-top"><span class="p-kind">Machine learning web app</span><span class="p-go" aria-hidden="true">↗</span></div>
+          <h3>Disease Prediction</h3>
+          <p>Predicts the risk of Diabetes, Heart Disease and Parkinson's Disease with trained ML models, on a medical-style dashboard with ECG animations and a live risk meter.</p>
+          <ul class="chips"><li>Python</li><li>Flask</li><li>Scikit-learn</li><li>HTML/CSS</li></ul>
+        </a>
+        <div class="project glow">
+          <div class="p-top"><span class="p-kind">Hardware · AI + IoT</span></div>
+          <h3>Smart Stick for the Visually Impaired</h3>
+          <p>An assistive walking stick that detects obstacles and hazards and gives real-time feedback, helping visually impaired people get around safely. Includes GPS and GSM.</p>
+          <ul class="chips"><li>ESP32</li><li>Ultrasonic sensor</li><li>GPS</li><li>GSM</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <h2 class="sec-title"><span class="sec-tag">Skills</span>What I work with</h2>
+      <div class="skills">
+        <div class="skill-group"><h3>Languages</h3><ul class="chips"><li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>HTML</li><li>CSS</li></ul></div>
+        <div class="skill-group"><h3>AI evaluation</h3><ul class="chips"><li>LLM evaluation</li><li>Agent benchmarking</li><li>Evaluation harnesses</li><li>RL trajectory analysis</li><li>Code-fix evaluation</li></ul></div>
+        <div class="skill-group"><h3>Backend &amp; data</h3><ul class="chips"><li>Node.js</li><li>Express</li><li>FastAPI</li><li>Flask</li><li>PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>Redis</li><li>Firebase</li></ul></div>
+        <div class="skill-group"><h3>Frontend &amp; ML</h3><ul class="chips"><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>Mongoose</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li></ul></div>
+        <div class="skill-group"><h3>Tools</h3><ul class="chips"><li>Git</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Vercel</li><li>GitHub Actions</li><li>Linux</li><li>Postman</li></ul></div>
+        <div class="skill-group certs">
+          <h3>Certifications</h3>
+          <ul class="cert-list">
+            <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_rc3DuopNuHQvTm6rY_1749725185086_completion_certificate.pdf" target="_blank" rel="noopener">Cyber Job Simulation <span>Deloitte</span></a></li>
+            <li><a href="https://www.linkedin.com/posts/aditya-raj-23844a213_excited-to-share-that-ive-successfully-earned-activity-7376309366460837888-vXcP" target="_blank" rel="noopener">AWS Workshop <span>GRAStech</span></a></li>
+            <li><a href="https://drive.google.com/file/d/1uJQAl8pHjN89JBwfXQep6l-JEL1lpv0y/view" target="_blank" rel="noopener">Java Fundamentals <span>IBM</span></a></li>
+            <li><a href="https://drive.google.com/file/d/1WXgggpof4a6kG6ZODymoFSdRefAG7n-h/view" target="_blank" rel="noopener">Introduction to Python <span>IBM</span></a></li>
+            <li><a href="https://drive.google.com/file/d/1i_YUcaruaQzjbJXQFTF9K9z6M7lA2z5M/view" target="_blank" rel="noopener">Watson Studio (ML) <span>IBM</span></a></li>
+            <li><a href="https://drive.google.com/file/d/1rhxIygXos3Il3k7CMu34ovdp9Pp5xRw8/view" target="_blank" rel="noopener">Data Science <span>IBM</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact reveal glow">
+      <img class="contact-avatar" src="avatar.jpg" alt="" width="64" height="64" />
+      <h2>Let's build something together.</h2>
+      <p>I'm open to full-stack and AI engineering roles. Email is the quickest way to reach me.</p>
+      <div class="email-row">
+        <a class="email" href="mailto:raj3aditya@gmail.com" id="emailText">raj3aditya@gmail.com</a>
+        <button class="btn btn-ghost" id="copyBtn" type="button">Copy</button>
+      </div>
+      <ul class="socials">
+        <li><a href="https://github.com/logic1391" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/aditya-raj-23844a213" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© <span id="year"></span> Aditya Raj</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
