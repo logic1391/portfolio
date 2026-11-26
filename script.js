@@ -1,7 +1,7 @@
 document.documentElement.classList.add("js");
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Appearance: dark by default, light when chosen (remembered per visitor)
+// Appearance: light by default, dark when chosen (remembered per visitor)
 const root = document.documentElement;
 document.getElementById("themeToggle").addEventListener("click", () => {
   root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";

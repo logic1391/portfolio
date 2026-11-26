@@ -141,9 +141,12 @@ h1, h2, h3 { text-wrap: balance; font-weight: 500; }
 /* Projects */
 .projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .project { display: flex; flex-direction: column; gap: 12px; transition: transform .45s var(--spring), border-color .3s, box-shadow .4s; }
-.project.wide { grid-column: span 2; }
+.project.top { grid-column: 1 / -1; }
+.project.top h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+.project.top .p-desc { font-size: 16px; max-width: 80ch; }
 a.project:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--acid) 55%, var(--line)); box-shadow: var(--shadow-card); }
-.p-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.p-top { display: flex; align-items: center; gap: 12px; }
+.p-top h3 { margin-right: auto; }
 .disc-acid { width: 36px; height: 36px; flex: none; border-radius: 50%; background: var(--acid); color: var(--on-acid); display: grid; place-items: center; transition: transform .45s var(--spring); }
 a.project:hover .disc-acid { transform: rotate(-45deg); }
 .p-desc { color: var(--ink-soft); font-size: 15px; line-height: 1.55; flex: 1; }
@@ -203,7 +206,6 @@ a.project:hover .disc-acid { transform: rotate(-45deg); }
 
 @media (max-width: 900px) {
   .projects, .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .project.wide { grid-column: 1 / -1; }
   .xp-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -235,3 +237,12 @@ a.project:hover .disc-acid { transform: rotate(-45deg); }
 .states b { color: var(--acid-text); font-weight: 600; margin-right: 6px; }
 .xp-tools { margin-top: 20px; }
 @media (max-width: 760px) { .xp-areas { grid-template-columns: 1fr; } .xp-area-wide { grid-column: auto; } }
+
+/* Ranked projects */
+.rank { flex: none; display: grid; place-items: center; min-width: 40px; height: 32px; padding: 0 10px; border-radius: 999px; background: var(--acid); color: var(--on-acid); font: 400 14px var(--f-display); }
+.p-chips { margin-top: 2px; }
+.p-chips li { font-size: 12px; padding: 4px 10px; }
+
+/* Pill under each big heading, same as the hero badge */
+.sec-pill { display: inline-flex; align-items: center; gap: 9px; margin-top: 16px; padding: 5px 14px 5px 5px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+.contact .sec-pill { margin-top: 18px; }
