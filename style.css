@@ -380,3 +380,9 @@ a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
 .medal + .medal .shine { animation-delay: 2s; }
 @keyframes shine { 0%, 55% { transform: translateX(0); } 100% { transform: translateX(75px); } }
 .widget:hover .medal { animation-duration: 1.4s; }
+
+/* Text-only widgets: centre the content in the space under the label instead of pinning it to the bottom */
+.widget .w-company, .widget .w-title { margin-top: auto; }
+.widget > .w-sub:last-child { margin-bottom: auto; }
+.widget .medals + .w-title { margin-top: auto; }
+.widget:has(.medals) > .w-sub:last-child { margin-bottom: 0; }
