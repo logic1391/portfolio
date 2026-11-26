@@ -1,24 +1,12 @@
 document.documentElement.classList.add("js");
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Appearance toggle: light by default, dark only when chosen (remembered per visitor)
+// Appearance: dark by default, light when chosen (remembered per visitor)
 const root = document.documentElement;
-try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
 document.getElementById("themeToggle").addEventListener("click", () => {
-  const dark = root.dataset.theme === "dark";
-  root.dataset.theme = dark ? "light" : "dark";
+  root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
   try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
 });
-
-// Underline the nav link for the section in view
-const navAs = [...document.querySelectorAll("#navLinks a")];
-const targets = navAs.map((a) => document.querySelector(a.getAttribute("href")));
-const onScroll = () => {
-  let i = -1;
-  targets.forEach((s, j) => { if (s && s.getBoundingClientRect().top < innerHeight * 0.45) i = j; });
-  navAs.forEach((a, j) => a.classList.toggle("active", j === i));
-};
-addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
 // Copy email
 const copyBtn = document.getElementById("copyBtn");
@@ -33,7 +21,7 @@ copyBtn.addEventListener("click", () => {
   if (navigator.clipboard) navigator.clipboard.writeText(email).then(done, fallback); else fallback();
 });
 
-// Sections settle into place as they arrive (always visible)
+// Sections ease into place as they arrive (always visible)
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver((entries) => entries.forEach((en) => {
     if (en.isIntersecting) { en.target.classList.add("visible"); io.unobserve(en.target); }

@@ -1,83 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Aditya Raj · Portfolio</title>
-  <meta name="description" content="Aditya Raj, Software Engineer at Ethara AI. Builds full-stack apps and tests AI coding agents." />
+  <title>Aditya Raj · Software Engineer</title>
+  <meta name="description" content="Aditya Raj, Software Engineer at Ethara AI. Builds full-stack apps, tests AI coding agents, ships with CI." />
+  <meta name="theme-color" content="#121210" />
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Inter:opsz,wght@14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="bar">
-    <div class="wrap bar-inner">
-      <a href="#top" class="brand">Aditya Raj</a>
-      <nav aria-label="Main" class="links" id="navLinks">
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills" class="hide-sm">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <header class="nav wrap">
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+    </nav>
+    <a class="logo" href="#top">ADITYA RAJ</a>
+    <div class="nav-right">
+      <a class="nav-gh" href="https://github.com/logic1391" target="_blank" rel="noopener">GitHub</a>
       <button class="theme" id="themeToggle" type="button" aria-label="Switch light or dark appearance">
-        <svg class="i-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.3 3a9 9 0 1 0 8.7 11.2A7.2 7.2 0 0 1 12.3 3Z"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.3 3a9 9 0 1 0 8.7 11.2A7.2 7.2 0 0 1 12.3 3Z"/></svg>
       </button>
+      <a class="btn btn-acid" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">Email me<span class="disc"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero wrap">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="who in" style="--i:0">
-        <img class="avatar" src="avatar.jpg" alt="Aditya Raj" width="400" height="400" />
-        <div>
-          <p class="who-name">Aditya Raj</p>
-          <p class="who-sub"><span class="live"></span>Available for new roles</p>
-        </div>
-      </div>
+      <p class="badge in" style="--i:0"><span class="badge-tag">Open</span><span class="live"></span>Available for new roles</p>
       <h1 class="in" style="--i:1">Software Engineer.<br /><span class="soft">Building </span><span class="rotator" id="rotator" aria-live="off"><span class="rot-word">reliable backends</span><span class="caret" aria-hidden="true"></span></span></h1>
-      <p class="lead in" style="--i:2">
-        I build web applications end to end, and at Ethara AI I run the
-        benchmarks that test whether a language model's code fix actually works.
-      </p>
-    </section>
-
-    <section class="facts wrap in" style="--i:3" aria-label="At a glance">
-      <dl class="fact-grid rule-top">
-        <div><dt>Role</dt><dd>Software Engineer</dd></div>
-        <div><dt>Company</dt><dd>Ethara AI, Gurugram</dd></div>
-        <div><dt>Based in</dt><dd>Varanasi, India</dd></div>
-        <div><dt>Education</dt><dd>B.Tech CSE, 2026</dd></div>
-        <a class="cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">Email me <svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
-      </dl>
-    </section>
-
-    <section class="thesis" aria-labelledby="thesisTitle">
-      <div class="wrap thesis-grid">
-        <h2 id="thesisTitle" class="thesis-title">Builds it.<br />Tests it.</h2>
-        <div class="thesis-col">
-          <h3>Builds</h3>
-          <p>Full-stack web apps from the database to the interface: authentication, payments, messaging, live dashboards, deployment and CI.</p>
-        </div>
-        <div class="thesis-col">
-          <h3>Tests</h3>
-          <p>At Ethara AI, Docker benchmarks that run an AI agent's code fix against the project's real test suite, then sort out what it fixed, what it kept working and what it broke.</p>
-        </div>
+      <p class="lead in" style="--i:2">I build web applications end to end, and at Ethara AI I run the benchmarks that test whether a language model's code fix actually works.</p>
+      <div class="actions in" style="--i:3">
+        <a class="btn btn-acid" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">Email me<span class="disc"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="btn btn-ghost" href="#projects">View projects<span class="disc"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
       </div>
+    </section>
+
+    <section class="wrap" aria-label="Portrait">
+      <div class="portrait in" style="--i:4">
+        <svg class="shape" viewBox="0 0 1136 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <polygon class="jag" points="440,560 410,360 455,250 430,140 560,95 620,160 690,120 720,270 675,350 745,470 720,560"/>
+          <g class="rays"><path d="M370 210 280 150"/><path d="M360 260 240 250"/><path d="M385 170 345 85"/><path d="M350 310 265 345"/><path d="M780 190 850 125"/><path d="M795 250 880 245"/><path d="M790 300 860 330"/></g>
+        </svg>
+        <img src="portrait.webp" alt="Aditya Raj" width="564" height="873" />
+      </div>
+    </section>
+
+    <section class="statements wrap reveal" aria-label="What I do">
+      <div><h2>Builds</h2><p>Full-stack web apps, from the database to the interface.</p></div>
+      <div><h2>Tests</h2><p>Docker benchmarks that check whether AI code fixes really work.</p></div>
+      <div><h2>Ships</h2><p>Deployed on Vercel, built and tested on every push.</p></div>
     </section>
 
     <section id="work" class="section wrap reveal">
-      <h2 class="sec-title">Experience</h2>
-      <div class="xp">
-        <div class="xp-when">
-          <p>May 2026 – Present</p>
-          <p class="mute">Gurugram, India</p>
-        </div>
-        <div class="xp-what">
-          <h3>Software Engineer, Ethara AI</h3>
-          <p class="xp-sum">On the Long Horizon Terminal Benchmarking (LHTB) project, which tests LLM-based agents on complex, repository-level software engineering tasks.</p>
+      <header class="sec-head"><p>Where I work</p><h2>Experience</h2></header>
+      <div class="xp-grid">
+        <article class="card xp">
+          <div class="xp-top"><div><h3>Software Engineer</h3><p class="mute">Ethara AI · Gurugram, India</p></div><span class="tag tag-acid">May 2026 – Present</span></div>
+          <p class="xp-sum">On the Long Horizon Terminal Benchmarking (LHTB) project, testing LLM-based agents on complex, repository-level software engineering tasks.</p>
           <ul class="xp-list">
             <li>Build repository-specific Docker images on Linux, set up dependencies, apply code patches and run tests in isolated environments.</li>
             <li>Score model-generated fixes against ground-truth patches by comparing baseline, test-patch and fix-patch runs.</li>
@@ -85,82 +68,87 @@
             <li>Track test-state transitions (fail-to-pass, skip-to-pass, none-to-pass, pass-to-pass) to find resolved issues, regressions and failed fixes.</li>
             <li>Support the evaluation harnesses and reports used to judge how reliable AI coding agents are.</li>
           </ul>
-        </div>
-      </div>
-      <div class="xp">
-        <div class="xp-when">
-          <p>2022 – 2026</p>
-          <p class="mute">Lucknow, India</p>
-        </div>
-        <div class="xp-what">
-          <h3>B.Tech, Computer Science (Cloud Computing &amp; ML)</h3>
-          <p class="xp-sum">Babu Banarasi Das University.</p>
-        </div>
+        </article>
+        <article class="card xp edu">
+          <h3>B.Tech, Computer Science</h3>
+          <p class="mute">Cloud Computing &amp; ML · Babu Banarasi Das University, Lucknow</p>
+          <span class="tag">2022 – 2026</span>
+        </article>
       </div>
     </section>
 
     <section id="projects" class="section wrap reveal">
-      <h2 class="sec-title">Projects</h2>
-      <ul class="index">
-        <li><a class="row" href="https://github.com/logic1391/TICKLED-PINK-ENTRY-SYSTEM" target="_blank" rel="noopener">
-          <span class="r-name">Tickled Pink</span>
-          <span class="r-what"><strong>Entry system for clubs and events.</strong> Guided check-in for single, couple and group entries, Razorpay payments, digital passes sent on WhatsApp, a live bouncer scanner and a capacity dashboard.</span>
-          <span class="r-stack">Node.js · Express · PostgreSQL · Razorpay · Twilio</span>
-          <span class="r-go"><svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-        </a></li>
-        <li><a class="row" href="https://github.com/logic1391/PlayConnect" target="_blank" rel="noopener">
-          <span class="r-name">PlayConnect</span>
-          <span class="r-what"><strong>Find colleagues who play your sport.</strong> Mobile app with sign-up, profiles, search by sport and availability, and an admin panel. JWT login, deployed on Vercel with Neon, built and tested on every push.</span>
-          <span class="r-stack">Node.js · Express · PostgreSQL · Flutter</span>
-          <span class="r-go"><svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-        </a></li>
-        <li><a class="row" href="https://github.com/logic1391/Project_Tracker" target="_blank" rel="noopener">
-          <span class="r-name">Project Tracker</span>
-          <span class="r-what"><strong>Role-based project and task manager.</strong> Admins create projects, manage members and extend deadlines; members update their own tasks. Overdue flags and a workload dashboard.</span>
-          <span class="r-stack">React · Node.js · Express · SQLite</span>
-          <span class="r-go"><svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-        </a></li>
-        <li><a class="row" href="https://github.com/logic1391/Chunaav-Yatra" target="_blank" rel="noopener">
-          <span class="r-name">Chunaav Yatra</span>
-          <span class="r-what"><strong>Civic platform for first-time voters.</strong> Election roadmap, polling-station map, an AI assistant for registration questions, and a side-by-side manifesto explorer.</span>
-          <span class="r-stack">React 19 · TypeScript · Tailwind · Vite</span>
-          <span class="r-go"><svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-        </a></li>
-        <li><a class="row" href="https://github.com/logic1391/Disease_Prediction" target="_blank" rel="noopener">
-          <span class="r-name">Disease Prediction</span>
-          <span class="r-what"><strong>Health-risk prediction web app.</strong> Machine-learning models estimate the risk of diabetes, heart disease and Parkinson's disease, shown on a dashboard with a live risk meter.</span>
-          <span class="r-stack">Python · Flask · Scikit-learn</span>
-          <span class="r-go"><svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-        </a></li>
-        <li><a class="row" href="https://github.com/logic1391/meme-mirror" target="_blank" rel="noopener">
-          <span class="r-name">Meme Mirror</span>
-          <span class="r-what"><strong>Computer vision for fun.</strong> Reads your expression from the webcam and shows the meme that matches it best, side by side with the live feed.</span>
-          <span class="r-stack">Python · OpenCV · NumPy</span>
-          <span class="r-go"><svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-        </a></li>
-        <li><div class="row is-static">
-          <span class="r-name">Smart Stick</span>
-          <span class="r-what"><strong>Walking aid for visually impaired people.</strong> Detects obstacles and hazards and gives real-time feedback, with GPS location and GSM alerts.</span>
-          <span class="r-stack">ESP32 · Ultrasonic sensor · GPS · GSM</span>
-          <span class="r-go"><span class="hw">Hardware</span></span>
-        </div></li>
-      </ul>
+      <header class="sec-head"><p>Things I've built</p><h2>Featured projects</h2></header>
+      <div class="projects">
+      <a class="card project wide" href="https://github.com/logic1391/TICKLED-PINK-ENTRY-SYSTEM" target="_blank" rel="noopener">
+        <div class="p-top"><h3>Tickled Pink</h3><span class="disc disc-acid"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        <p class="p-desc"><strong>Entry system for clubs and events.</strong> Guided check-in for single, couple and group entries, Razorpay payments, digital passes sent on WhatsApp, a live bouncer scanner and a capacity dashboard.</p>
+        <p class="p-stack">Node.js · Express · PostgreSQL · Razorpay · Twilio</p>
+      </a>
+      <a class="card project" href="https://github.com/logic1391/PlayConnect" target="_blank" rel="noopener">
+        <div class="p-top"><h3>PlayConnect</h3><span class="disc disc-acid"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        <p class="p-desc"><strong>Find colleagues who play your sport.</strong> Profiles, search by sport and availability, JWT login, deployed on Vercel and tested on every push.</p>
+        <p class="p-stack">Node.js · Express · PostgreSQL · Flutter</p>
+      </a>
+      <a class="card project" href="https://github.com/logic1391/Project_Tracker" target="_blank" rel="noopener">
+        <div class="p-top"><h3>Project Tracker</h3><span class="disc disc-acid"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        <p class="p-desc"><strong>Role-based project manager.</strong> Admins run projects, members and deadlines; members update their own tasks. Overdue flags and a workload dashboard.</p>
+        <p class="p-stack">React · Node.js · Express · SQLite</p>
+      </a>
+      <a class="card project wide" href="https://github.com/logic1391/Chunaav-Yatra" target="_blank" rel="noopener">
+        <div class="p-top"><h3>Chunaav Yatra</h3><span class="disc disc-acid"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        <p class="p-desc"><strong>Civic platform for first-time voters.</strong> Election roadmap, polling-station map, an AI assistant for registration questions and a side-by-side manifesto explorer.</p>
+        <p class="p-stack">React 19 · TypeScript · Tailwind · Vite</p>
+      </a>
+      <a class="card project" href="https://github.com/logic1391/Disease_Prediction" target="_blank" rel="noopener">
+        <div class="p-top"><h3>Disease Prediction</h3><span class="disc disc-acid"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        <p class="p-desc"><strong>Health-risk prediction app.</strong> Machine-learning models estimate the risk of diabetes, heart disease and Parkinson's, shown with a live risk meter.</p>
+        <p class="p-stack">Python · Flask · Scikit-learn</p>
+      </a>
+      <a class="card project" href="https://github.com/logic1391/meme-mirror" target="_blank" rel="noopener">
+        <div class="p-top"><h3>Meme Mirror</h3><span class="disc disc-acid"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+        <p class="p-desc"><strong>Computer vision for fun.</strong> Reads your expression from the webcam and shows the meme that matches it best.</p>
+        <p class="p-stack">Python · OpenCV · NumPy</p>
+      </a>
+      <div class="card project">
+        <div class="p-top"><h3>Smart Stick</h3><span class="tag">Hardware</span></div>
+        <p class="p-desc"><strong>Walking aid for visually impaired people.</strong> Detects obstacles and hazards and gives real-time feedback, with GPS location and GSM alerts.</p>
+        <p class="p-stack">ESP32 · Ultrasonic sensor · GPS · GSM</p>
+      </div>
+      </div>
     </section>
 
     <section id="skills" class="section wrap reveal">
-      <h2 class="sec-title">Skills</h2>
+      <header class="sec-head"><p>What I work with</p><h2>Skills</h2></header>
       <div class="skills">
-        <div><h3>Languages</h3><p>Python, Java, JavaScript, SQL, HTML, CSS</p></div>
-        <div><h3>Backend &amp; data</h3><p>Node.js, Express, FastAPI, Flask, PostgreSQL, MongoDB, MySQL, Redis, Firebase</p></div>
-        <div><h3>Frontend &amp; ML</h3><p>React, Next.js, Tailwind CSS, Pandas, NumPy, Scikit-learn</p></div>
-        <div><h3>AI evaluation</h3><p>LLM evaluation, agent benchmarking, evaluation harnesses, RL trajectory analysis</p></div>
-        <div><h3>Tools</h3><p>Git, Docker, Kubernetes, AWS, Vercel, GitHub Actions, Linux, Postman</p></div>
+      <div class="card skill"><h3>Languages</h3><ul class="chips"><li>Python</li><li>Java</li><li>JavaScript</li><li>SQL</li><li>HTML</li><li>CSS</li></ul></div>
+      <div class="card skill"><h3>Backend &amp; data</h3><ul class="chips"><li>Node.js</li><li>Express</li><li>FastAPI</li><li>Flask</li><li>PostgreSQL</li><li>MongoDB</li><li>MySQL</li><li>Redis</li><li>Firebase</li></ul></div>
+      <div class="card skill"><h3>Frontend &amp; ML</h3><ul class="chips"><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li></ul></div>
+      <div class="card skill"><h3>AI evaluation</h3><ul class="chips"><li>LLM evaluation</li><li>Agent benchmarking</li><li>Evaluation harnesses</li><li>RL trajectory analysis</li></ul></div>
+      <div class="card skill"><h3>Tools</h3><ul class="chips"><li>Git</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>Vercel</li><li>GitHub Actions</li><li>Linux</li><li>Postman</li></ul></div>
+      <div class="card pitch">
+        <div class="medals">
+          <svg class="medal" viewBox="0 0 40 62" width="48" height="74" role="img" aria-label="Silver medal">
+          <defs><linearGradient id="g-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#c9ced6"/><stop offset="1" stop-color="#8a939e"/></linearGradient><clipPath id="c-silver"><circle cx="20" cy="44" r="15"/></clipPath></defs>
+          <path d="M8 0h9l8 26h-9z" fill="#2f6fd6"/><path d="M32 0h-9l-8 26h9z" fill="#1f4f9e"/>
+          <circle cx="20" cy="44" r="15" fill="url(#g-silver)"/><circle cx="20" cy="44" r="11" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
+          <path d="M20 37.5l2 4.1 4.5.6-3.3 3.1.8 4.4L20 47.6l-4 2.1.8-4.4-3.3-3.1 4.5-.6z" fill="rgba(255,255,255,.8)"/>
+          <g clip-path="url(#c-silver)"><g transform="rotate(25 20 44)"><rect class="shine" x="-30" y="10" width="10" height="70" fill="rgba(255,255,255,.75)"/></g></g>
+        </svg>
+          <svg class="medal" viewBox="0 0 40 62" width="48" height="74" role="img" aria-label="Bronze medal">
+          <defs><linearGradient id="g-bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d2ad"/><stop offset=".55" stop-color="#cd8a52"/><stop offset="1" stop-color="#8f4a1f"/></linearGradient><clipPath id="c-bronze"><circle cx="20" cy="44" r="15"/></clipPath></defs>
+          <path d="M8 0h9l8 26h-9z" fill="#d9443a"/><path d="M32 0h-9l-8 26h9z" fill="#a92e26"/>
+          <circle cx="20" cy="44" r="15" fill="url(#g-bronze)"/><circle cx="20" cy="44" r="11" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
+          <path d="M20 37.5l2 4.1 4.5.6-3.3 3.1.8 4.4L20 47.6l-4 2.1.8-4.4-3.3-3.1 4.5-.6z" fill="rgba(255,255,255,.8)"/>
+          <g clip-path="url(#c-bronze)"><g transform="rotate(25 20 44)"><rect class="shine" x="-30" y="10" width="10" height="70" fill="rgba(255,255,255,.75)"/></g></g>
+        </svg>
+        </div>
+        <div><h3>Off the pitch</h3><p class="mute">Silver, Inter-College Football<br />Bronze, District Football</p></div>
       </div>
-
-      <div class="extras">
-        <div>
-          <h3 class="sub-title">Certifications</h3>
-          <ul class="certs">
+      </div>
+      <div class="card certs-card">
+        <h3>Certifications</h3>
+        <ul class="certs">
             <li><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_rc3DuopNuHQvTm6rY_1749725185086_completion_certificate.pdf" target="_blank" rel="noopener"><span class="l-key">Cyber Job Simulation</span><span class="l-val">Deloitte</span></a></li>
             <li><a href="https://www.linkedin.com/posts/aditya-raj-23844a213_excited-to-share-that-ive-successfully-earned-activity-7376309366460837888-vXcP" target="_blank" rel="noopener"><span class="l-key">AWS Workshop</span><span class="l-val">GRAStech</span></a></li>
             <li><a href="https://drive.google.com/file/d/1uJQAl8pHjN89JBwfXQep6l-JEL1lpv0y/view" target="_blank" rel="noopener"><span class="l-key">Java Fundamentals</span><span class="l-val">IBM</span></a></li>
@@ -168,60 +156,29 @@
             <li><a href="https://drive.google.com/file/d/1i_YUcaruaQzjbJXQFTF9K9z6M7lA2z5M/view" target="_blank" rel="noopener"><span class="l-key">Watson Studio (ML)</span><span class="l-val">IBM</span></a></li>
             <li><a href="https://drive.google.com/file/d/1rhxIygXos3Il3k7CMu34ovdp9Pp5xRw8/view" target="_blank" rel="noopener"><span class="l-key">Data Science</span><span class="l-val">IBM</span></a></li>
           </ul>
-        </div>
-        <div class="pitch">
-          <h3 class="sub-title">Off the pitch</h3>
-          <div class="medals">
-          <svg class="medal" viewBox="0 0 40 62" width="48" height="74" role="img" aria-label="Silver medal">
-            <defs>
-              <linearGradient id="g-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#c9ced6"/><stop offset="1" stop-color="#8a939e"/></linearGradient>
-              <clipPath id="c-silver"><circle cx="20" cy="44" r="15"/></clipPath>
-            </defs>
-            <path d="M8 0h9l8 26h-9z" fill="#2f6fd6"/>
-            <path d="M32 0h-9l-8 26h9z" fill="#1f4f9e"/>
-            <circle cx="20" cy="44" r="15" fill="url(#g-silver)"/>
-            <circle cx="20" cy="44" r="11" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
-            <path d="M20 37.5l2 4.1 4.5.6-3.3 3.1.8 4.4L20 47.6l-4 2.1.8-4.4-3.3-3.1 4.5-.6z" fill="rgba(255,255,255,.8)"/>
-            <g clip-path="url(#c-silver)"><g transform="rotate(25 20 44)"><rect class="shine" x="-30" y="10" width="10" height="70" fill="rgba(255,255,255,.75)"/></g></g>
-          </svg>
-          <svg class="medal" viewBox="0 0 40 62" width="48" height="74" role="img" aria-label="Bronze medal">
-            <defs>
-              <linearGradient id="g-bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d2ad"/><stop offset=".55" stop-color="#cd8a52"/><stop offset="1" stop-color="#8f4a1f"/></linearGradient>
-              <clipPath id="c-bronze"><circle cx="20" cy="44" r="15"/></clipPath>
-            </defs>
-            <path d="M8 0h9l8 26h-9z" fill="#d9443a"/>
-            <path d="M32 0h-9l-8 26h9z" fill="#a92e26"/>
-            <circle cx="20" cy="44" r="15" fill="url(#g-bronze)"/>
-            <circle cx="20" cy="44" r="11" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
-            <path d="M20 37.5l2 4.1 4.5.6-3.3 3.1.8 4.4L20 47.6l-4 2.1.8-4.4-3.3-3.1 4.5-.6z" fill="rgba(255,255,255,.8)"/>
-            <g clip-path="url(#c-bronze)"><g transform="rotate(25 20 44)"><rect class="shine" x="-30" y="10" width="10" height="70" fill="rgba(255,255,255,.75)"/></g></g>
-          </svg>
-        </div>
-          <p class="pitch-line"><strong>Silver</strong> Inter-College Football Tournament</p>
-          <p class="pitch-line"><strong>Bronze</strong> District Football Tournament</p>
-        </div>
       </div>
     </section>
 
-    <section id="contact" class="contact reveal">
-      <div class="wrap contact-inner">
+    <section id="contact" class="section wrap reveal">
+      <div class="card contact">
         <h2>Let's talk.</h2>
         <p>I'm open to software engineering and AI roles. Email is the fastest way to reach me.</p>
         <div class="email-row">
           <a class="email" id="emailText" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">raj3aditya@gmail.com</a>
           <button class="copy" id="copyBtn" type="button">Copy</button>
         </div>
-        <div class="contact-links">
-          <a href="https://github.com/logic1391" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/aditya-raj-23844a213" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="actions">
+          <a class="btn btn-acid" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">Email me<span class="disc"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+          <a class="btn btn-plain" href="https://www.linkedin.com/in/aditya-raj-23844a213" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-plain" href="https://github.com/logic1391" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer wrap">
-    <p>© <span id="year"></span> Aditya Raj</p>
-    <p>Varanasi, India</p>
+    <p>© <span id="year"></span> Aditya Raj · Varanasi, India</p>
+    <p>Design inspired by the <a href="https://www.modulify.ai/" target="_blank" rel="noopener">Brutalist template by Modulify</a></p>
   </footer>
 
   <script src="script.js"></script>

@@ -35,10 +35,12 @@ Visitors read on laptops and phones, often from a link in an application. No log
 
 ## Brand Commitments
 
-- The hero heading ("Software Engineer." + rotating "Building ___" phrase) and the contact heading ("Let's talk.") keep their current typeface treatment: the system font stack (SF Pro on Apple devices, Inter fallback) with tight tracking: the hero at weight 800, "Let's talk." at 700.
+- Visual reference chosen by the owner: the "Brutalist" template by Modulify (credited in the footer and DESIGN.md).
+- The hero heading and "Let's talk." use Bungee (the reference's chunky display style); all other text uses Poppins.
 - The hero text animations stay exactly as they are: the rotating phrase that blurs out and in, the blinking caret, and the staggered entrance.
-- Light mode is the default; dark mode only via the toggle.
-- Profile photo: `avatar.jpg`, shown in a circle.
+- Dark mode is the default; light mode only via the toggle.
+- Photos: `portrait.webp`, the owner's own photo with the background removed, shown in the hero portrait card.
+- "Email me" opens Gmail compose addressed to raj3aditya@gmail.com.
 
 ## Evidence on Hand
 
