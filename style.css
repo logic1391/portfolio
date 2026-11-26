@@ -270,3 +270,21 @@ a.project:hover .disc-acid { transform: rotate(-45deg); }
   .nav-mobile a { flex: none; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 500; }
   html { scroll-padding-top: 120px; }
 }
+
+/* Tiles: soft layered shadows so cards sit slightly raised */
+:root {
+  --shadow-tile: 0 1px 2px rgba(0, 0, 0, .35), 0 8px 18px -8px rgba(0, 0, 0, .45), 0 22px 40px -24px rgba(0, 0, 0, .55);
+  --shadow-tile-hover: 0 2px 4px rgba(0, 0, 0, .4), 0 16px 30px -10px rgba(0, 0, 0, .55), 0 34px 60px -28px rgba(0, 0, 0, .65);
+  --shadow-inset: 0 1px 2px rgba(0, 0, 0, .3);
+}
+:root[data-theme="light"] {
+  --shadow-tile: 0 1px 2px rgba(18, 18, 16, .06), 0 6px 14px -6px rgba(18, 18, 16, .10), 0 20px 36px -22px rgba(18, 18, 16, .18);
+  --shadow-tile-hover: 0 2px 4px rgba(18, 18, 16, .07), 0 14px 26px -10px rgba(18, 18, 16, .14), 0 32px 56px -28px rgba(18, 18, 16, .24);
+  --shadow-inset: 0 1px 2px rgba(18, 18, 16, .06);
+}
+.card { box-shadow: var(--shadow-tile); transition: transform .45s var(--spring), box-shadow .4s ease, border-color .3s; }
+a.project:hover, .skill:hover, .pitch:hover, .xp:hover, .certs-card:hover { box-shadow: var(--shadow-tile-hover); }
+.skill:hover, .pitch:hover { transform: translateY(-3px); }
+.xp-area { box-shadow: var(--shadow-inset); }
+.badge, .btn-ghost, .btn-plain, .theme { box-shadow: var(--shadow-inset); }
+.portrait { box-shadow: var(--shadow-tile-hover); }
