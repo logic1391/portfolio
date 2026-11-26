@@ -38,7 +38,7 @@ Visitors read on laptops and phones, often from a link in an application. No log
 - Visual reference chosen by the owner: the "Brutalist" template by Modulify (credited in the footer and DESIGN.md).
 - The hero heading and "Let's talk." use Bungee (the reference's chunky display style); all other text uses Poppins.
 - The hero text animations stay exactly as they are: the rotating phrase that blurs out and in, the blinking caret, and the staggered entrance.
-- Dark mode is the default; light mode only via the toggle.
+- Light mode is the default; dark mode via the toggle (remembered per visitor).
 - Photos: `portrait.webp`, the owner's own photo with the background removed, shown in the hero portrait card.
 - "Email me" opens Gmail compose addressed to raj3aditya@gmail.com.
 

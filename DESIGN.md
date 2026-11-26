@@ -164,7 +164,7 @@ components:
 
 A confident engineer's poster, pinned up at night. The first viewport is loud: an uppercase Bungee headline on a near-black ground, an acid-yellow phrase that keeps changing, and Aditya's own cut-out portrait standing on a jagged violet shape with hand-drawn acid strokes radiating from it. Below the portrait the voice drops: calm Poppins, centred section titles, and rounded cards with hairline borders that show real work plainly.
 
-The system is dark by default, with a light theme one toggle away (remembered per visitor). Everything interactive is a pill; the primary and secondary buttons end in a round arrow disc that turns 45° on hover. One signal colour carries all emphasis. Density is relaxed: 1200px measure, generous section gaps, cards that breathe.
+The system opens in light by default (owner request), with the dark theme one toggle away (remembered per visitor). Everything interactive is a pill; the primary and secondary buttons end in a round arrow disc that turns 45° on hover. One signal colour carries all emphasis. Density is relaxed: 1200px measure, generous section gaps, cards that breathe.
 
 The visual reference is Modulify's "Brutalist" template, used as inspiration only (see Credits). The build keeps its spirit (dark poster hero, pill actions, arrow discs, sketch strokes) and rebuilds every piece for this portfolio.
 
@@ -306,7 +306,7 @@ Under prefers-reduced-motion all animation and transitions stop, the rays render
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep dark as the default theme and ship every colour as a dark/light token pair; the light theme is a token swap on `:root[data-theme="light"]`, remembered per visitor.
+- **Do** keep light as the default theme (set on `<html data-theme="light">`) and ship every colour as a dark/light token pair, remembered per visitor.
 - **Do** use acid for the single primary action per view and pair it with one ghost button.
 - **Do** end primary and ghost buttons in the round arrow disc that turns -45° on hover.
 - **Do** use acid-text (#5b6300 on light) whenever acid colour is applied to words.
