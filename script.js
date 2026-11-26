@@ -87,3 +87,18 @@ document.querySelectorAll(".glass").forEach((el) => {
     el.style.setProperty("--my", `${e.clientY - r.top}px`);
   });
 });
+
+// Headline phrase that swaps every few seconds
+const phrases = ["reliable backends", "clean interfaces", "AI agent benchmarks", "products people use"];
+const rotWord = document.querySelector("#rotator .rot-word");
+let pi = 0;
+if (rotWord && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  setInterval(() => {
+    rotWord.classList.remove("in"); rotWord.classList.add("out");
+    setTimeout(() => {
+      pi = (pi + 1) % phrases.length;
+      rotWord.textContent = phrases[pi];
+      rotWord.classList.remove("out"); rotWord.classList.add("in");
+    }, 380);
+  }, 2800);
+}
