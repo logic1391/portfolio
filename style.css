@@ -288,3 +288,27 @@ a.project:hover, .skill:hover, .pitch:hover, .xp:hover, .certs-card:hover { box-
 .xp-area { box-shadow: var(--shadow-inset); }
 .badge, .btn-ghost, .btn-plain, .theme { box-shadow: var(--shadow-inset); }
 .portrait { box-shadow: var(--shadow-tile-hover); }
+
+/* Rays beside the portrait: draw in, then flicker like electricity with a tiny jitter */
+.rays path {
+  transform-box: fill-box; transform-origin: center;
+  animation: draw 1.1s var(--spring) forwards, zap var(--z, 3.2s) steps(1, end) infinite, jitter var(--j, .9s) ease-in-out infinite alternate;
+  animation-delay: var(--dd, .6s), calc(var(--dd, .6s) + 1.1s), calc(var(--dd, .6s) + 1.1s);
+}
+.rays path:nth-child(1) { --dd: .6s;  --z: 3.1s; --j: .8s; }
+.rays path:nth-child(2) { --dd: .9s;  --z: 3.9s; --j: 1.1s; }
+.rays path:nth-child(3) { --dd: .75s; --z: 2.7s; --j: .95s; }
+.rays path:nth-child(4) { --dd: 1.05s; --z: 3.5s; --j: 1s; }
+.rays path:nth-child(5) { --dd: .8s;  --z: 2.9s; --j: .85s; }
+.rays path:nth-child(6) { --dd: .95s; --z: 4.2s; --j: 1.15s; }
+.rays path:nth-child(7) { --dd: 1.1s; --z: 3.3s; --j: .9s; }
+.rays path:nth-child(8) { --dd: .85s; --z: 3.7s; --j: 1.05s; }
+@keyframes zap {
+  0%, 70% { opacity: 1; }
+  72% { opacity: .15; } 74% { opacity: 1; } 76% { opacity: .35; } 78% { opacity: 1; }
+  88% { opacity: .55; } 90%, 100% { opacity: 1; }
+}
+@keyframes jitter {
+  from { transform: translate(-1px, .5px) rotate(-1.5deg); }
+  to   { transform: translate(1px, -.5px) rotate(1.5deg); }
+}
