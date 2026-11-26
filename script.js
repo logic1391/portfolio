@@ -40,19 +40,6 @@ addEventListener("scroll", onScroll, { passive: true });
 addEventListener("resize", () => moveIndicator(current));
 onScroll();
 
-// Clock widget (India Standard Time)
-const clock = document.getElementById("clock");
-const clockDate = document.getElementById("clockDate");
-const tick = () => {
-  try {
-    const now = new Date();
-    const [hh, mm] = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" }).format(now).split(":");
-    clock.innerHTML = `${hh}<span class="colon">:</span>${mm}`;
-    clockDate.textContent = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "short", timeZone: "Asia/Kolkata" }).format(now);
-  } catch (e) {}
-};
-tick(); setInterval(tick, 15000);
-
 // Copy email
 const copyBtn = document.getElementById("copyBtn");
 copyBtn.addEventListener("click", () => {

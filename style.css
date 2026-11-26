@@ -364,3 +364,16 @@ a.card:hover .app-icon { transform: rotate(-6deg) scale(1.06); }
 .caret { display: inline-block; width: .07em; height: .82em; margin-left: .06em; border-radius: 2px; background: var(--accent); align-self: center; animation: caretBlink 1.05s steps(1) infinite; }
 @keyframes caretBlink { 50% { opacity: 0; } }
 @media (max-width: 620px) { .rotator { white-space: normal; } }
+
+/* Currently tile: company in bold, role underneath */
+.w-company { font: 800 1.55rem/1.1 var(--f-display); letter-spacing: -.03em; margin-top: auto; }
+.w-role { font-size: 15px; font-weight: 400; color: var(--ink); margin-top: 4px; }
+
+/* Football tile */
+.ball { color: var(--ink); margin: 14px 0 0; animation: roll 4.5s var(--spring) infinite; transform-origin: 50% 50%; }
+@keyframes roll {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  45% { transform: translateX(14px) rotate(120deg); }
+  55% { transform: translateX(14px) rotate(120deg); }
+}
+.widgets > :nth-child(1) { --tint: #34c759; }
