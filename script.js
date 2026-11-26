@@ -1,11 +1,11 @@
 document.documentElement.classList.add("js");
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Appearance: light by default, dark when chosen (remembered per visitor)
+// Appearance: always opens in day mode; a dark choice lasts for this visit only
 const root = document.documentElement;
 document.getElementById("themeToggle").addEventListener("click", () => {
   root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
-  try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  try { sessionStorage.setItem("theme", root.dataset.theme); } catch (e) {}
 });
 
 // Copy email
@@ -43,3 +43,8 @@ if (rotWord && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
     }, 380);
   }, 2800);
 }
+
+// Nav gains a backdrop once the page scrolls
+const shell = document.getElementById("navShell");
+const onNav = () => shell.classList.toggle("scrolled", scrollY > 8);
+addEventListener("scroll", onNav, { passive: true }); onNav();
