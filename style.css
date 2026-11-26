@@ -231,3 +231,118 @@ a.row:hover .r-go .arr { transform: translate(3px, -3px); }
   .skills > div { padding-left: 0; border-right: none; }
   .fact-grid dd { font-size: 16px; }
 }
+
+/* =====================================================================
+   Depth layer: soft grey ground, raised white sheets, a lit blue panel.
+   Structure, type and the pinned hero/contact treatment are unchanged.
+   ===================================================================== */
+:root {
+  --ground: #f3f4f7;
+  --sheet: #ffffff;
+  --sheet-line: rgba(17, 17, 17, .07);
+  --shadow-sheet: 0 1px 2px rgba(16, 24, 40, .04), 0 2px 6px rgba(16, 24, 40, .03), 0 18px 40px -18px rgba(16, 24, 40, .18);
+  --shadow-lift: 0 2px 4px rgba(16, 24, 40, .05), 0 28px 56px -20px rgba(16, 24, 40, .26);
+  --glow: rgba(0, 113, 227, .16);
+  --grid-line: rgba(17, 17, 17, .055);
+  --r-sheet: 22px;
+}
+:root[data-theme="dark"] {
+  --ground: #09090b;
+  --sheet: #141417;
+  --sheet-line: rgba(255, 255, 255, .07);
+  --shadow-sheet: 0 1px 2px rgba(0, 0, 0, .4), 0 18px 40px -18px rgba(0, 0, 0, .7);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, .4), 0 28px 56px -20px rgba(0, 0, 0, .8);
+  --glow: rgba(41, 151, 255, .18);
+  --grid-line: rgba(255, 255, 255, .05);
+}
+body { background: var(--ground); }
+body::before { background: var(--ground); }
+.bar { background: color-mix(in srgb, var(--ground) 82%, transparent); -webkit-backdrop-filter: blur(16px) saturate(160%); backdrop-filter: blur(16px) saturate(160%); border-bottom-color: var(--sheet-line); }
+.theme { border-radius: 10px; border-color: var(--sheet-line); background: var(--sheet); box-shadow: var(--shadow-sheet); }
+
+/* Hero: faint 12-column grid and a soft blue light behind the headline */
+.hero { position: relative; isolation: isolate; }
+.hero-bg { position: absolute; z-index: -1; inset: -40px 0 -120px; pointer-events: none;
+  background:
+    radial-gradient(520px 340px at 72% 46%, var(--glow), transparent 70%),
+    repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px calc((100% - 1px) / 12));
+  -webkit-mask-image: radial-gradient(120% 90% at 40% 30%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(120% 90% at 40% 30%, #000 30%, transparent 75%);
+}
+.avatar { box-shadow: 0 0 0 4px var(--sheet), 0 10px 24px -8px rgba(16, 24, 40, .35); }
+
+/* Fact strip becomes a raised sheet */
+.fact-grid { background: var(--sheet); border: 1px solid var(--sheet-line); border-radius: var(--r-sheet); box-shadow: var(--shadow-sheet); overflow: hidden; }
+.fact-grid > div { border-right-color: var(--sheet-line); padding: 18px 20px 20px; transition: background .3s ease; }
+.fact-grid > div:first-child { padding-left: 22px; }
+.fact-grid > div:hover { background: color-mix(in srgb, var(--accent) 5%, var(--sheet)); }
+.cta { background: linear-gradient(135deg, #2a8cff, var(--field) 55%, #0058c7); padding: 18px 22px 20px; }
+
+/* Thesis: a lit, rounded blue panel with grain and a slow light sweep */
+.thesis { position: relative; overflow: hidden; isolation: isolate; max-width: 1240px; margin: 0 auto; width: calc(100% - 2 * max(12px, env(safe-area-inset-left, 0px)));
+  border-radius: 34px; background:
+    radial-gradient(900px 500px at 85% 0%, rgba(255,255,255,.22), transparent 60%),
+    radial-gradient(700px 420px at 0% 100%, rgba(0, 20, 90, .35), transparent 65%),
+    linear-gradient(135deg, #1a86ff 0%, var(--field) 45%, #0049b8 100%);
+  box-shadow: 0 40px 80px -36px rgba(0, 80, 200, .55), inset 0 1px 0 rgba(255,255,255,.25); }
+.thesis::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .12; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.thesis::after { content: ""; position: absolute; inset: -20% auto -20% -40%; width: 40%; z-index: -1; transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); animation: sweep 9s ease-in-out infinite; }
+@keyframes sweep { 0%, 35% { left: -40%; } 100% { left: 130%; } }
+.thesis-title { text-shadow: 0 2px 30px rgba(0, 30, 120, .25); }
+.thesis-col { border-top-color: rgba(255,255,255,.45); }
+
+/* Experience rows as sheets */
+.xp { background: var(--sheet); border: 1px solid var(--sheet-line); border-radius: var(--r-sheet); box-shadow: var(--shadow-sheet);
+  padding: 28px 30px; margin-top: 16px; transition: box-shadow .4s ease, transform .5s var(--spring); }
+.xp:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+.sec-title { margin-bottom: 8px; }
+
+/* Project index inside one sheet; hover fill spans the sheet */
+.index { margin-top: 16px; background: var(--sheet); border: 1px solid var(--sheet-line); border-radius: var(--r-sheet); box-shadow: var(--shadow-sheet); overflow: hidden; }
+.index li { border-bottom-color: var(--sheet-line); }
+.index li:last-child { border-bottom: none; }
+.row { padding: 24px 28px; }
+a.row::before { inset: 0; background: linear-gradient(120deg, #1a86ff, var(--field) 50%, #0052c2); }
+
+/* Skills as small sheets */
+.skills { gap: 14px; margin-top: 16px; }
+.skills > div, .skills > div:first-child { background: var(--sheet); border: 1px solid var(--sheet-line); border-radius: 18px; box-shadow: var(--shadow-sheet); padding: 20px 20px 22px; transition: transform .5s var(--spring), box-shadow .4s ease; }
+.skills > div:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+.skills h3 { color: var(--ink); }
+
+/* Certifications + medals sheets */
+.extras > div { background: var(--sheet); border: 1px solid var(--sheet-line); border-radius: var(--r-sheet); box-shadow: var(--shadow-sheet); padding: 24px 26px; }
+.sub-title { border-bottom-color: var(--sheet-line); }
+.certs li, .pitch-line { border-bottom-color: var(--sheet-line); }
+.certs li:last-child { border-bottom: none; }
+.medal { filter: drop-shadow(0 6px 8px rgba(16, 24, 40, .18)); }
+.medal .shine { animation: shine 4.5s ease-in-out infinite; }
+.medal + .medal .shine { animation-delay: 2.2s; }
+@keyframes shine { 0%, 55% { transform: translateX(0); } 100% { transform: translateX(75px); } }
+
+/* Contact on a sheet with a soft light */
+.contact { border-top: none; }
+.contact-inner { position: relative; overflow: hidden; background: var(--sheet); border: 1px solid var(--sheet-line); border-radius: 30px; box-shadow: var(--shadow-sheet);
+  padding: clamp(36px, 6vw, 72px) clamp(24px, 5vw, 64px); }
+.contact-inner::before { content: ""; position: absolute; right: -10%; top: -40%; width: 60%; height: 140%; pointer-events: none;
+  background: radial-gradient(closest-side, var(--glow), transparent); }
+.contact-inner > * { position: relative; }
+.copy { border-radius: 10px; border-color: var(--sheet-line); background: var(--ground); }
+.footer { border-top-color: var(--sheet-line); }
+
+@media (max-width: 960px) {
+  .fact-grid > div { border-bottom-color: var(--sheet-line); }
+  .fact-grid > div:nth-child(odd) { padding-left: 22px; }
+  .skills > div:nth-child(odd) { padding-left: 20px; }
+}
+@media (max-width: 620px) {
+  .xp { padding: 22px 20px; }
+  .row { padding: 20px; }
+  .extras > div { padding: 20px; }
+  .thesis { border-radius: 26px; }
+  .skills > div, .skills > div:first-child { padding-left: 20px; }
+}
+.row { grid-template-columns: minmax(0, 3.4fr) minmax(0, 4.8fr) minmax(0, 2.8fr) 40px; }
+@media (max-width: 960px) { .row { grid-template-columns: minmax(0, 1fr) 32px; } }

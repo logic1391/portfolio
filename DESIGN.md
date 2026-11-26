@@ -260,3 +260,15 @@ Square. Every container, button, field and toggle has 0 radius. Circles are rese
 - **Don't** add uppercase, letter-spaced eyebrows or kickers above headings.
 - **Don't** centre-align blocks; the page reads flush-left.
 - **Don't** introduce a second accent colour; green is the status dot only.
+
+## Revision: depth layer (owner request)
+
+The owner found the flat poster too plain. The grid, type and pinned hero stay as they are, and depth is added on top of them:
+- **Grey ground:** the page is now cool grey (`#f3f4f7`). Content sits on raised white sheets with a 22px radius, a hairline border and a soft layered shadow; the shadow deepens on hover.
+- **Hero backdrop:** a faint 12-column grid sits behind the hero, with a soft blue light behind the headline.
+- **Blue panel:** the thesis block is now a rounded, lit blue gradient panel with grain and a slow light sweep.
+- **Project rows:** the hover fill is now a blue gradient.
+- **Medals:** they are metallic silver and bronze, with a shine and a sway.
+- **Email:** "Email me" and the contact email open Gmail compose, addressed to the owner.
+
+This supersedes the earlier "no shadows / no rounded cards / flat" rules.

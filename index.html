@@ -29,6 +29,7 @@
 
   <main id="top">
     <section class="hero wrap">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="who in" style="--i:0">
         <img class="avatar" src="avatar.jpg" alt="Aditya Raj" width="400" height="400" />
         <div>
@@ -49,7 +50,7 @@
         <div><dt>Company</dt><dd>Ethara AI, Gurugram</dd></div>
         <div><dt>Based in</dt><dd>Varanasi, India</dd></div>
         <div><dt>Education</dt><dd>B.Tech CSE, 2026</dd></div>
-        <a class="cta" href="mailto:raj3aditya@gmail.com">Email me <svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
+        <a class="cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">Email me <svg class="arr" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
       </dl>
     </section>
 
@@ -171,17 +172,29 @@
         <div class="pitch">
           <h3 class="sub-title">Off the pitch</h3>
           <div class="medals">
-          <svg class="medal" viewBox="0 0 40 62" width="44" height="68" role="img" aria-label="Silver medal">
-            <path d="M8 0h9l8 26h-9z" style="fill:var(--field)"/>
-            <path d="M32 0h-9l-8 26h9z" style="fill:var(--ink)"/>
-            <circle cx="20" cy="44" r="15" style="fill:var(--rule-soft)"/>
-            <text x="20" y="49.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-weight="800" font-size="14" style="fill:var(--ink)">S</text>
+          <svg class="medal" viewBox="0 0 40 62" width="48" height="74" role="img" aria-label="Silver medal">
+            <defs>
+              <linearGradient id="g-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#c9ced6"/><stop offset="1" stop-color="#8a939e"/></linearGradient>
+              <clipPath id="c-silver"><circle cx="20" cy="44" r="15"/></clipPath>
+            </defs>
+            <path d="M8 0h9l8 26h-9z" fill="#2f6fd6"/>
+            <path d="M32 0h-9l-8 26h9z" fill="#1f4f9e"/>
+            <circle cx="20" cy="44" r="15" fill="url(#g-silver)"/>
+            <circle cx="20" cy="44" r="11" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
+            <path d="M20 37.5l2 4.1 4.5.6-3.3 3.1.8 4.4L20 47.6l-4 2.1.8-4.4-3.3-3.1 4.5-.6z" fill="rgba(255,255,255,.8)"/>
+            <g clip-path="url(#c-silver)"><g transform="rotate(25 20 44)"><rect class="shine" x="-30" y="10" width="10" height="70" fill="rgba(255,255,255,.75)"/></g></g>
           </svg>
-          <svg class="medal" viewBox="0 0 40 62" width="44" height="68" role="img" aria-label="Bronze medal">
-            <path d="M8 0h9l8 26h-9z" style="fill:var(--field)"/>
-            <path d="M32 0h-9l-8 26h9z" style="fill:var(--ink)"/>
-            <circle cx="20" cy="44" r="15" style="fill:var(--ink)"/>
-            <text x="20" y="49.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-weight="800" font-size="14" style="fill:var(--paper)">B</text>
+          <svg class="medal" viewBox="0 0 40 62" width="48" height="74" role="img" aria-label="Bronze medal">
+            <defs>
+              <linearGradient id="g-bronze" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d2ad"/><stop offset=".55" stop-color="#cd8a52"/><stop offset="1" stop-color="#8f4a1f"/></linearGradient>
+              <clipPath id="c-bronze"><circle cx="20" cy="44" r="15"/></clipPath>
+            </defs>
+            <path d="M8 0h9l8 26h-9z" fill="#d9443a"/>
+            <path d="M32 0h-9l-8 26h9z" fill="#a92e26"/>
+            <circle cx="20" cy="44" r="15" fill="url(#g-bronze)"/>
+            <circle cx="20" cy="44" r="11" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2"/>
+            <path d="M20 37.5l2 4.1 4.5.6-3.3 3.1.8 4.4L20 47.6l-4 2.1.8-4.4-3.3-3.1 4.5-.6z" fill="rgba(255,255,255,.8)"/>
+            <g clip-path="url(#c-bronze)"><g transform="rotate(25 20 44)"><rect class="shine" x="-30" y="10" width="10" height="70" fill="rgba(255,255,255,.75)"/></g></g>
           </svg>
         </div>
           <p class="pitch-line"><strong>Silver</strong> Inter-College Football Tournament</p>
@@ -195,7 +208,7 @@
         <h2>Let's talk.</h2>
         <p>I'm open to software engineering and AI roles. Email is the fastest way to reach me.</p>
         <div class="email-row">
-          <a class="email" id="emailText" href="mailto:raj3aditya@gmail.com">raj3aditya@gmail.com</a>
+          <a class="email" id="emailText" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=raj3aditya@gmail.com&amp;su=Opportunity%20for%20Aditya%20Raj" target="_blank" rel="noopener">raj3aditya@gmail.com</a>
           <button class="copy" id="copyBtn" type="button">Copy</button>
         </div>
         <div class="contact-links">
