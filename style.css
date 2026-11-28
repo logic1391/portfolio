@@ -317,7 +317,7 @@ a.project:hover, .skill:hover, .pitch:hover, .xp:hover, .certs-card:hover { box-
 .sec-sub { margin-top: 16px; color: var(--ink-muted); font-size: 16px; }
 .work-stack { display: grid; gap: 28px; }
 .work-card {
-  position: sticky; top: calc(96px + (var(--n) - 1) * 14px);
+  position: sticky; top: calc(96px + (var(--n) - 1) * 12px); transform-origin: 50% 0; will-change: transform;
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 40px; align-items: center;
   padding: 36px; border: 1px solid var(--line); border-radius: 28px; background: var(--surface);
   box-shadow: var(--shadow-tile-hover);
@@ -375,7 +375,7 @@ a.project:hover, .skill:hover, .pitch:hover, .xp:hover, .certs-card:hover { box-
 
 /* ===== GitHub ===== */
 .gh-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 20px; align-items: start; }
-.gh-profile { grid-row: span 2; display: flex; flex-direction: column; gap: 18px; }
+.gh-profile { display: flex; flex-direction: column; gap: 18px; }
 .gh-id { display: flex; align-items: center; gap: 14px; }
 .gh-id img { width: 56px; height: 56px; border-radius: 16px; object-fit: cover; background: var(--surface-raised); }
 .gh-id h3 { font-size: 19px; }
@@ -416,8 +416,8 @@ a.project:hover, .skill:hover, .pitch:hover, .xp:hover, .certs-card:hover { box-
 a.gh-repo:hover { transform: translateY(-3px); box-shadow: var(--shadow-tile-hover); }
 
 @media (max-width: 960px) {
-  .work-card { position: relative; top: 0; grid-template-columns: 1fr; padding: 24px; }
-  .work-card + .work-card { margin-top: 0; }
+  .work-card { grid-template-columns: 1fr; padding: 24px; }
+  .work-card + .work-card { margin-top: 30vh; }
   .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skill-card, .skill-card.wide { grid-column: span 1; }
   .skill-card.wide:first-child, .skills-grid > .skill-card:last-child { grid-column: 1 / -1; }
@@ -442,3 +442,5 @@ a.gh-repo:hover { transform: translateY(-3px); box-shadow: var(--shadow-tile-hov
 .m-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; transform: translateY(1px); }
 .m-dot.silver { background: linear-gradient(135deg, #ffffff, #9aa3ad); box-shadow: 0 0 0 1px #8a939e; }
 .m-dot.bronze { background: linear-gradient(135deg, #f6d2ad, #a85c2a); box-shadow: 0 0 0 1px #8f4a1f; }
+.gh-grid { align-items: stretch; }
+.gh-repos { align-content: start; }

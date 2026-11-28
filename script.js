@@ -114,17 +114,34 @@ setupDemos();
     document.getElementById("langList").innerHTML = langs.map(([l, n]) => `<li><i style="background:${color(l)}"></i>${esc(l)}<b>${n}</b></li>`).join("");
   }).catch(() => { [".gh-label", "#langBar", "#langList"].forEach((s) => { const e = document.querySelector(s); if (e) e.hidden = true; }); });
 
-  const cal = document.getElementById("ghCal");
-  fetch(`https://github-contributions-api.jogruber.de/v4/${USER}?y=last`).then((r) => (r.ok ? r.json() : Promise.reject())).then((d) => {
-    const days = d.contributions || [];
-    if (!days.length) throw 0;
-    const pad = new Date(days[0].date).getDay();
-    cal.innerHTML = '<i style="visibility:hidden"></i>'.repeat(pad) + days.map((c) => `<i class="l${c.level}" title="${c.count} on ${c.date}"></i>`).join("");
-    document.getElementById("ghTotal").textContent = days.reduce((s, c) => s + c.count, 0);
-    document.getElementById("ghDays").textContent = days.filter((c) => c.count > 0).length + " active days";
-    cal.parentElement.scrollLeft = cal.scrollWidth;
-  }).catch(() => {
-    document.querySelector(".gh-cal-head").hidden = true; document.querySelector(".cal-legend").hidden = true;
-    cal.outerHTML = '<p class="cal-empty">Live contribution calendar: <a href="https://github.com/logic1391" target="_blank" rel="noopener">open my GitHub profile</a>.</p>';
-  });
+})();
+
+// Projects stack on every screen size: a card scrolls fully into view, pins,
+// then the next one slides over it while it eases back
+(function stackCards() {
+  const cards = [...document.querySelectorAll(".work-card")];
+  if (!cards.length) return;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const layout = () => {
+    const base = innerWidth <= 960 ? 76 : 96;
+    cards.forEach((c, i) => {
+      const fit = innerHeight - c.offsetHeight - 16;
+      c.style.top = Math.min(base + i * 12, fit) + "px";
+    });
+  };
+  const onScroll = () => {
+    if (reduce) return;
+    cards.forEach((c, i) => {
+      const next = cards[i + 1];
+      if (!next) return;
+      const top = c.getBoundingClientRect().top, ntop = next.getBoundingClientRect().top;
+      const p = Math.min(1, Math.max(0, 1 - (ntop - top) / (innerHeight * 0.8)));
+      c.style.transform = `scale(${1 - p * 0.06})`;
+      c.style.filter = `brightness(${1 - p * 0.12})`;
+    });
+  };
+  layout(); onScroll();
+  addEventListener("resize", () => { layout(); onScroll(); });
+  addEventListener("scroll", onScroll, { passive: true });
+  addEventListener("load", layout);
 })();
