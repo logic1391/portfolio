@@ -1,0 +1,63 @@
+/* Chakras: a slowly turning Konark wheel behind the portrait, and a different faint chakra in every tile.
+   Faint at rest, a little stronger on hover. Lines are black SVG; dark mode inverts them. */
+
+/* Konark wheel behind the portrait */
+.portrait .tex-wheel {
+  position: absolute; width: 130%; aspect-ratio: 1; left: 50%; top: 50%; translate: -50% -50%;
+  background: url(chakras/konark-wheel.svg) center / contain no-repeat;
+  opacity: .035; pointer-events: none;
+  transition: opacity .5s ease; animation: wheel 90s linear infinite;
+}
+.portrait:hover .tex-wheel { opacity: .11; }
+:root[data-theme="dark"] .portrait .tex-wheel { filter: invert(1); }
+.portrait .shape, .portrait img { z-index: 1; }
+@keyframes wheel { to { rotate: 360deg; } }
+
+/* A chakra watermark inside every information tile (design set per tile in script.js) */
+.card { position: relative; isolation: isolate; overflow: hidden; }
+.work-card { isolation: isolate; overflow: clip; } /* stays position: sticky for the stacking */
+.card::after, .work-card::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  width: 260px; aspect-ratio: 1; right: -80px; bottom: -90px;
+  background: var(--chakra, url(chakras/konark-wheel.svg)) center / contain no-repeat;
+  opacity: .025; transition: opacity .5s ease;
+  animation: chakraSpin var(--spin, 140s) linear infinite;
+}
+:root[data-theme="dark"] .card::after, :root[data-theme="dark"] .work-card::after { filter: invert(1); opacity: .035; }
+.card:hover::after, .work-card:hover::after { opacity: .085; }
+:root[data-theme="dark"] .card:hover::after, :root[data-theme="dark"] .work-card:hover::after { opacity: .11; }
+@keyframes chakraSpin { to { rotate: 360deg; } }
+.work-card:nth-child(even)::after, .skill-card:nth-child(even)::after, .gh-repo:nth-child(even)::after { animation-direction: reverse; --spin: 170s; }
+.work-card::after { width: 420px; right: -130px; bottom: -150px; }
+.skill-card.wide::after, .xp::after { width: 320px; right: -100px; bottom: -110px; }
+.contact::after { width: 520px; right: -170px; bottom: -200px; --spin: 200s; }
+.gh-repo::after, .project::after { width: 180px; right: -60px; bottom: -70px; }
+
+/* Slight 3D: raised slabs */
+:root { --edge-hi: rgba(255,255,255,.9); --edge-lo: rgba(18,18,16,.08); --slab-top: #ffffff; --slab-bot: #f6f6f0; }
+:root[data-theme="dark"] { --edge-hi: rgba(255,255,255,.07); --edge-lo: rgba(0,0,0,.45); --slab-top: #1f1f1b; --slab-bot: #171714; }
+.card, .work-card {
+  background-color: var(--surface);
+  background-image: linear-gradient(180deg, var(--slab-top), var(--slab-bot));
+  border-bottom-color: color-mix(in srgb, var(--line) 70%, #000 30%);
+  box-shadow: inset 0 1px 0 var(--edge-hi), inset 0 -2px 0 var(--edge-lo), 0 1px 1px rgba(0,0,0,.06), 0 4px 0 -1px color-mix(in srgb, var(--line) 85%, #000 15%), 0 18px 34px -18px rgba(0,0,0,.28);
+}
+:root[data-theme="dark"] .card, :root[data-theme="dark"] .work-card {
+  border-bottom-color: #0b0b0a;
+  box-shadow: inset 0 1px 0 var(--edge-hi), inset 0 -2px 0 var(--edge-lo), 0 4px 0 -1px #0b0b0a, 0 22px 40px -18px rgba(0,0,0,.75);
+}
+.work-card { background-image: linear-gradient(180deg, var(--slab-top), var(--slab-bot)), radial-gradient(600px 300px at 0% 0%, color-mix(in srgb, var(--acid) 10%, transparent), transparent 70%); }
+.xp-area, .gh-stats div { box-shadow: inset 0 1px 0 var(--edge-hi), 0 2px 0 -1px color-mix(in srgb, var(--line) 80%, #000 20%); }
+.tilt { transition: transform .5s cubic-bezier(.22,1,.36,1), box-shadow .4s ease; transform-style: preserve-3d; will-change: transform; }
+
+/* Big headings: raised keys */
+.sec-head h2, .contact h2 {
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--acid) 70%, #fff 30%) 0%, var(--acid) 45%, color-mix(in srgb, var(--acid) 88%, #000 12%) 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.55), inset 0 -3px 0 rgba(0,0,0,.08), 0 6px 0 color-mix(in srgb, var(--acid) 62%, #000 38%), 0 18px 28px -12px rgba(0,0,0,.35);
+  transform: translateY(-3px);
+}
+.contact h2 { box-shadow: inset 0 3px 0 rgba(255,255,255,.55), inset 0 -4px 0 rgba(0,0,0,.08), 0 8px 0 color-mix(in srgb, var(--acid) 62%, #000 38%), 0 22px 34px -14px rgba(0,0,0,.35); }
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait .tex-wheel, .card::after, .work-card::after { animation: none; }
+}

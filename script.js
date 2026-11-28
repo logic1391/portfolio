@@ -145,3 +145,19 @@ setupDemos();
   addEventListener("scroll", onScroll, { passive: true });
   addEventListener("load", layout);
 })();
+
+// Chakra watermarks in tiles and a slight 3D tilt
+  (function(){
+    // a different chakra in every tile, never the same as its neighbour
+    const C=["konark-wheel","ashoka-chakra","sri-yantra","lotus-mandala","sudarshan","dharma-wheel","shatkona","muladhara"];
+    document.querySelectorAll(".card, .work-card").forEach((t,i)=>t.style.setProperty("--chakra",`url(chakras/${C[(i*3)%C.length]}.svg)`));
+    // slight 3D tilt toward the cursor (desktop pointers only)
+    if (matchMedia("(hover: hover) and (pointer: fine)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll(".card:not(.work-card .card), .skill-card, .gh-repo, .xp, .contact").forEach((el)=>{
+        el.classList.add("tilt");
+        el.addEventListener("pointermove",(e)=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+          const k=r.width>700?1.2:3;el.style.transform=`perspective(900px) rotateX(${(-y*k).toFixed(2)}deg) rotateY(${(x*k).toFixed(2)}deg) translateY(-3px)`;});
+        el.addEventListener("pointerleave",()=>{el.style.transform="";});
+      });
+    }
+  })();
