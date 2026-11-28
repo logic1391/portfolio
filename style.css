@@ -445,3 +445,9 @@ a.gh-repo:hover { transform: translateY(-3px); box-shadow: var(--shadow-tile-hov
 .gh-grid { align-items: stretch; }
 .gh-repos { align-content: start; }
 :root[data-theme="dark"] .skill-chips img.lift { background: #f4f4ec; border-radius: 4px; padding: 1px; }
+
+/* TEST: skills as plain logo + name, no pill boxes */
+.skill-chips { gap: 14px 22px; }
+.skill-chips li { background: none; border: none; padding: 0; box-shadow: none; font-size: 15px; font-weight: 500; gap: 9px; color: var(--ink); }
+.skill-chips li:hover { border: none; transform: translateY(-1px); }
+.skill-chips img { width: 22px; height: 22px; }
