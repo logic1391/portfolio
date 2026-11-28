@@ -368,8 +368,8 @@ a.project:hover, .skill:hover, .pitch:hover, .xp:hover, .certs-card:hover { box-
 .skill-head p { color: var(--ink-muted); font-size: 14px; margin-top: 2px; }
 .skill-count { font: 400 34px/1 var(--f-display); color: var(--acid-text); }
 .skill-chips li { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; padding: 6px 12px; }
-.skill-chips img { width: 14px; height: 14px; opacity: .75; }
-:root[data-theme="dark"] .skill-chips img { filter: invert(1); }
+.skill-chips img { width: 16px; height: 16px; object-fit: contain; }
+:root[data-theme="dark"] .skill-chips img.mono { filter: invert(1); }
 .skills-extra { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 20px; margin-top: 20px; align-items: stretch; }
 .skills-extra .certs-card { margin-top: 0; }
 
@@ -444,3 +444,4 @@ a.gh-repo:hover { transform: translateY(-3px); box-shadow: var(--shadow-tile-hov
 .m-dot.bronze { background: linear-gradient(135deg, #f6d2ad, #a85c2a); box-shadow: 0 0 0 1px #8f4a1f; }
 .gh-grid { align-items: stretch; }
 .gh-repos { align-content: start; }
+:root[data-theme="dark"] .skill-chips img.lift { background: #f4f4ec; border-radius: 4px; padding: 1px; }
